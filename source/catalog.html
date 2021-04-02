@@ -27,7 +27,7 @@
             </a>
           </div>
           <nav class="main-nav nav">
-            <button class="button .button_hamburger main-nav__toggle nav__button" type="button"><span class="visually-hidden">Открыть меню</span></button>
+            <button class="button button_hamburger main-nav__toggle nav__button" type="button"><span class="visually-hidden">Открыть меню</span></button>
             <ul class="nav__list">
               <li class="nav__item">
                 <a class="nav__link">Главная</a>
@@ -61,22 +61,23 @@
         <h2 class="visually-hidden">Каталог фотографий</h2>
         <div class="catalog__wrapper">
 
-          <ul class="catalog__list">
-
-            <li class="catalog__item card">
-              <a class="card__link" href="#" aria-label="ссылка на полноэкранное изображение">
-                <!-- Добавить псевдоэлемент для надписи панорама дня-->
-                <img class="card__img" src="img/panorama.jpg" width="320" height="127" alt="Металлический мост между двумя возвышенностями">
-              </a>
-              <blockquote class="card__content">
-                <p class="card__author">Анна<span class="card__info">(5 минут назад)</span></p>
-                <p class="card__text">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
-              </blockquote>
+          <div class="catalog__item card">
+            <a class="card__link" href="#" aria-label="ссылка на полноэкранное изображение">
+              <!-- Добавить псевдоэлемент для надписи панорама дня-->
+              <img class="card__img" src="img/panorama.jpg" width="320" height="127" alt="Металлический мост между двумя возвышенностями">
+            </a>
+            <blockquote class="card__content">
+              <p class="card__author">Анна<span class="card__info">(5 минут назад)</span></p>
+              <p class="card__text">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
               <div class="card__like-wrapper">
                 <p class="card__like-count">Нравится:215</p>
-                <button class="button button_heart .card__heart-button" type="button" aria-label="Кнопка в форме сердечка, добавляет или убирает like "></button>
+                <button class="button button_heart card__heart-button" type="button" aria-label="Кнопка в форме сердечка, добавляет или убирает like"></button>
               </div>
-            </li>
+            </blockquote>
+          </div>
+
+
+          <ul class="catalog__list">
 
             <li class="catalog__item card">
               <a class="card__link" href="#" aria-label="ссылка на полноэкранное изображение">
@@ -85,11 +86,11 @@
               <blockquote class="card__content">
                 <p class="card__author">Левон<span class="card__info">(5 часов назад)</span></p>
                 <p class="card__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+                <div class="card__like-wrapper">
+                  <p class="card__like-count">Нравится:356</p>
+                  <button class="button button_heart card__heart-button" type="button" aria-label="Кнопка в форме сердечка, добавляет или убирает like"></button>
+                </div>
               </blockquote>
-              <div class="card__like-wrapper">
-                <p class="card__like-count">Нравится:356</p>
-                <button class="button button_heart .card__heart-button" type="button" aria-label="Кнопка в форме сердечка, добавляет или убирает like "></button>
-              </div>
             </li>
 
             <li class="catalog__item card">
@@ -98,11 +99,12 @@
               </a>
               <blockquote class="card__content">
                 <p class="card__author">Антон<span class="card__info">(12 часов назад)</span></p>
-                <p class="catalog__reviews-text">Соседи будут рады!</p>
+                <p class="card__text">Соседи будут рады!</p>
+                <div class="card__like-wrapper">
+                  <p class="card__like-count">Нравится:666</p>
+                  <button class="button button_heart card__heart-button" type="button" aria-label="Кнопка в форме сердечка, добавляет или убирает like"></button>
+                </div>
               </blockquote>
-              <p class="catalog__like">Нравится:</p>
-              <p class="catalog__heart-count">666</p>
-              <button class="button button_heart .card__heart-button" type="button"></button>
             </li>
 
             <li class="catalog__item card">
@@ -111,11 +113,12 @@
               </a>
               <blockquote class="card__content">
                 <p class="card__author">Борис<span class="card__info">(20 часов назад)</span></p>
-                <p class="catalog__reviews-text">Здесь могла быть ваша цитата о высоком и вечном.</p>
+                <p class="card__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
+                <div class="card__like-wrapper">
+                  <p class="card__like-count">Нравится:215</p>
+                  <button class="button button_heart card__heart-button" type="button" aria-label="Кнопка в форме сердечка, добавляет или убирает like"></button>
+                </div>
               </blockquote>
-              <p class="catalog__like">Нравится:</p>
-              <p class="catalog__heart-count">215</p>
-              <button class="button button_heart .card__heart-button" type="button"></button>
             </li>
 
             <li class="catalog__item card">
@@ -124,11 +127,12 @@
               </a>
               <blockquote class="card__content">
                 <p class="card__author">Сергей<span class="card__info">(25 часов назад)</span></p>
-                <p class="catalog__reviews-text">Самая кубанская в мире!</p>
+                <p class="card__text">Самая кубанская в мире!</p>
+                <div class="card__like-wrapper">
+                  <p class="card__like-count">Нравится:4</p>
+                  <button class="button button_heart card__heart-button" type="button" aria-label="Кнопка в форме сердечка, добавляет или убирает like"></button>
+                </div>
               </blockquote>
-              <p class="catalog__like">Нравится:</p>
-              <p class="catalog__heart-count">4</p>
-              <button class="button button_heart .card__heart-button" type="button"></button>
             </li>
 
             <li class="catalog__item card">
@@ -137,11 +141,12 @@
               </a>
               <blockquote class="card__content">
                 <p class="card__author">Максим<span class="card__info">(40 часов назад)</span></p>
-                <p class="catalog__reviews-text">Где снег-то?</p>
+                <p class="card__text">Где снег-то?</p>
+                <div class="card__like-wrapper">
+                  <p class="card__like-count">Нравится:150</p>
+                  <button class="button button_heart card__heart-button" type="button" aria-label="Кнопка в форме сердечка, добавляет или убирает like"></button>
+                </div>
               </blockquote>
-              <p class="catalog__like">Нравится:</p>
-              <p class="catalog__heart-count">150</p>
-              <button class="button button_heart .card__heart-button" type="button"></button>
             </li>
 
             <li class="catalog__item card">
@@ -150,11 +155,12 @@
               </a>
               <blockquote class="card__content">
                 <p class="card__author">Надежда<span class="card__info">(45 часов назад)</span></p>
-                <p class="catalog__reviews-text">Всем GM и взаимные лайки!</p>
+                <p class="card__text">Всем GM и взаимные лайки!</p>
+                <div class="card__like-wrapper">
+                  <p class="card__like-count">Нравится:2560</p>
+                  <button class="button button_heart card__heart-button" type="button" aria-label="Кнопка в форме сердечка, добавляет или убирает like"></button>
+                </div>
               </blockquote>
-              <p class="catalog__like">Нравится:</p>
-              <p class="catalog__heart-count">2560</p>
-              <button class="button button_heart .card__heart-button" type="button"></button>
             </li>
           </ul>
         </div>
