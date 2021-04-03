@@ -5,6 +5,8 @@
 }
 
 .nav__item {
+  display: block;
+  box-shadow: 0 1px 0 #000000, inset 0 1px 0 rgba(255, 255, 255, 0.15);
   padding: 0;
   margin: 0;
 }
@@ -13,10 +15,27 @@
   display: block;
   font-weight: bold;
   font-size: 18px;
-  line-height: 32px;
+  line-height: 15px;
   color: var(--bacis-white);
   text-decoration: none;
   text-transform: uppercase;
-  padding: 0;
+  padding: 25px 20px;
   margin: 0;
+}
+
+.nav__link:hover,
+.nav__link:focus {
+  color: var(--basic-red);
+}
+
+.nav__link:active {
+  color: var(--special-white-opacity);
+}
+
+.nav__link_disabled {
+  pointer-events: none;
+}
+
+.nav__button {
+  display: none;
 }

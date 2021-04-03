@@ -9,17 +9,34 @@
 }
 
 .app-download__link {
+  display: block;
   text-decoration: none;
   padding: 0;
   margin: 0;
+
+  &_default {
+    width: 280px;
+    height: 56px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 15px;
+    color: var(--basic-white);
+    text-align: center;
+    border: 3px solid var(--basic-white);
+    box-sizing: border-box;
+    border-radius: 30px;
+    padding: 16px;
+  }
 }
 
-.app-download__link_default {
-  display: block;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 18px;
-  color: var(--basic-white);
+.app-download__link:hover,
+.app-download__link:focus {
+  color: var(--basic-red);
+  background-color: var(--basic-white);
+}
+
+.app-download__link:active {
+  color: var(--special-red-opacity);
 }
 
 .app-download__slogan {
