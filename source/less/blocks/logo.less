@@ -11,17 +11,17 @@
   &_footer {
     text-align: center;
   }
-}
 
-.logo__link:hover path,
-.logo__link:focus path {
-  fill: var(--basic-red);
-}
+  &_disabled {
+    pointer-events: none;
+  }
 
-.logo__link:active path {
-  opacity: 0.3;
-}
+  &:hover:not(:active) path,
+  &:focus:not(:active) path {
+    fill: var(--basic-red);
+  }
 
-.logo__link_disabled {
-  pointer-events: none;
+  &:active path {
+    opacity: 0.3;
+  }
 }

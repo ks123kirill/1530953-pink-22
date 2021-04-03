@@ -26,17 +26,17 @@
     box-sizing: border-box;
     border-radius: 30px;
     padding: 16px;
+
+    &:hover,
+    &:focus {
+      color: var(--basic-red);
+      background-color: var(--basic-white);
+    }
+
+    &:active {
+      color: var(--special-red-opacity);
+    }
   }
-}
-
-.app-download__link:hover,
-.app-download__link:focus {
-  color: var(--basic-red);
-  background-color: var(--basic-white);
-}
-
-.app-download__link:active {
-  color: var(--special-red-opacity);
 }
 
 .app-download__slogan {
