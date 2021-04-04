@@ -1,0 +1,36 @@
+.form__button-submit {
+  width: 100%;
+  color: var(--basic-white);
+  background-color: var(--basic-green);
+  padding: 23px;
+  margin: 52px 0 46px 0;
+
+  &:hover,
+  &:focus {
+    background-color: var(--basic-green-dark);
+  }
+
+  &:active {
+    background-color: var(--basic-green-dark);
+    color: var(--special-white-opacity);
+    outline: transparent;
+  }
+
+  &:disabled {
+    background-color: var(--basic-grey);
+  }
+}
+
+.form__note {
+  font-size: 14px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.form__note-star {
+  color: var(--basic-red);
+}
+
+.form__note-hidden {
+  display: none;
+}
