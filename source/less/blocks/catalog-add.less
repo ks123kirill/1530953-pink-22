@@ -1,0 +1,57 @@
+.catalog-add {
+  background-color: var(--basic-grey);
+}
+
+.catalog-add__img {
+  width: 280px;
+  height: 374px;
+  object-fit: contain;
+  margin: 0 0 40px 0;
+  background-color: var(--basic-blue-dark);
+}
+
+.catalog-add__button {
+  width: 280px;
+  height: 56px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 15px;
+  text-align: center;
+  border: 3px solid;
+  box-sizing: border-box;
+  border-radius: 30px;
+  padding: 16px;
+  margin-bottom: 12px;
+
+  &_post {
+    color: var(--basic-red);
+    border-color: var(--basic-red);
+
+    &:hover,
+    &:focus {
+      color: var(--basic-white);
+      background-color: var(--basic-red);
+    }
+
+    &:active {
+      color: var(--special-white-opacity);
+    }
+  }
+
+  &_canсel {
+    color: var(--special-blue-light-opacity);
+    border-color: var(--special-blue-light-opacity);
+
+    &:hover,
+    &:focus {
+      color: var(--special-blue-opacity);
+      border-color: var(--special-blue-opacity);
+    }
+
+    &:active {
+      color: var(--special-white-opacity);
+      background-color: var(--special-blue-opacity);
+      border-color: transparent;
+    }
+  }
+}
