@@ -1,5 +1,4 @@
 .app-download {
-  min-height: 782px;
   color: var(--basic-white);
   background-color: var(--basic-blue-darken);
   background-image: url("../img/background-town-hand.png");
@@ -8,13 +7,28 @@
   background-position: top;
 }
 
+.app-download__block {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    align-items: flex-start;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 110px;
+  }
+}
+
 .app-download__link {
   display: block;
   text-decoration: none;
   padding: 0;
   margin: 0;
 
-  &_default {
+  &--default {
     width: 280px;
     height: 56px;
     font-weight: bold;
@@ -22,11 +36,16 @@
     line-height: 15px;
     color: var(--basic-white);
     text-align: center;
-    text-transform: uppercase;
     border: 3px solid var(--basic-white);
     box-sizing: border-box;
     border-radius: 30px;
     padding: 16px;
+    margin: 0 0 30px 0;
+
+    @media (min-width: @desktop-width) {
+      font-size: 21px;
+      line-height: 18px;
+    }
 
     &:hover,
     &:focus {
@@ -44,8 +63,37 @@
   font-weight: 300;
   font-size: 24px;
   line-height: 120%;
-  padding: 0;
+  padding: 30px 0 400px 0;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 245px;
+    font-size: 40px;
+    padding: 102px 0 40px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 50px;
+    line-height: 68px;
+  }
+}
+
+.app-download__link-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 30px;
+
+  & a:not(:last-child) {
+    margin-right: 35px;
+  }
+
+  & a:first-of-type {
+    @media (min-width: @tablet-width) {
+      margin-left: 46px;
+    }
+  }
 }
 
 .app-download__availability {
@@ -53,5 +101,9 @@
   font-size: 14px;
   line-height: 24px;
   padding: 0;
-  margin: 0;
+  margin: 0 0 40px 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 120px 0;
+  }
 }
