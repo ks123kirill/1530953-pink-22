@@ -4,3 +4,29 @@
   outline: 5px solid purple;
   outline-offset: -5px;
 }
+
+@media (min-width: @desktop-width) {
+  .main-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px 0 20px;
+  }
+
+  .main-header a {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 18px;
+    text-transform: none;
+    margin: 0 0 0 80px;
+    box-shadow: none;
+  }
+
+  .main-header__nav-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
