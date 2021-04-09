@@ -1,17 +1,23 @@
 .main-header {
   color: var(--basic-white);
   background-color: var(--basic-blue-dark);
+  text-align: left;
   outline: 5px solid purple;
   outline-offset: -5px;
 }
 
 @media (min-width: @desktop-width) {
-  .main-header {
+  .main-header__wrapper {
+    max-width: 1200px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0 20px 0 20px;
+    box-sizing: border-box;
+    padding: 0 130px;
+    margin: 0 auto;
+    outline: 1px dotted var(--basic-red);
+    outline-offset: -1px;
   }
 
   .main-header a {
@@ -19,7 +25,6 @@
     font-size: 18px;
     line-height: 18px;
     text-transform: none;
-    margin: 0 0 0 80px;
     box-shadow: none;
   }
 
