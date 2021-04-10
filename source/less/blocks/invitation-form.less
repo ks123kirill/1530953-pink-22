@@ -3,8 +3,31 @@
   outline-offset: -5px;
 }
 
+.invitation-form span {
+  display: none;
+}
+
 .invitation-form__text {
   font-size: 14px;
   line-height: 30px;
   color: var(--basic-blue-dark);
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .invitation-form__text {
+    font-size: 18px;
+    padding: 100px 65px;
+  }
+
+  .invitation-form span {
+    display: inline;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .invitation-form__text {
+    padding: 100px 90px;
+  }
 }
