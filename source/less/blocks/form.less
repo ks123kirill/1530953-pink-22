@@ -1,5 +1,6 @@
 .form__button-submit {
   width: 100%;
+  text-transform: uppercase;
   color: var(--basic-white);
   background-color: var(--basic-green);
   padding: 23px;
@@ -33,4 +34,127 @@
 
 .form__note-hidden {
   display: none;
+}
+
+.form__user-name input {
+  width: calc(100% + 33px);
+  margin-left: -23px;
+}
+
+@media (min-width: @mobile-width + 1px) {
+  .form__user-name label {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 55px 0;
+  }
+
+  .form__user-name input {
+    margin: 0;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+
+  .form__user-name label {
+    width: 620px;
+  }
+
+  .form__user-name {
+    order: 1;
+  }
+
+  .form__user-platform {
+    order: 2;
+  }
+
+  .form__user-contacts {
+    order: 3;
+  }
+
+  .form__user-progress {
+    order: 4;
+  }
+
+  .form__user-message {
+    order: 5;
+  }
+
+  .form__button-submit {
+    width: 300px;
+  }
+
+  .form__submit {
+    order: 6;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form {
+    display: grid;
+    grid-template-columns: repeat(2, 435px);
+    grid-template-rows: repeat(5, min-content);
+    grid-gap: 0 70px;
+  }
+
+  .form__user-name {
+    grid-row: ~"1/2";
+    grid-column: ~"1/2";
+  }
+
+  .form__user-name label {
+    width: 435px;
+  }
+
+  .form__user-platform {
+    grid-row: ~"1/2";
+    grid-column: ~"2/-1";
+  }
+
+  .form__user-contacts {
+    grid-row: ~"2/3";
+    grid-column: ~"1/-1";
+  }
+
+  .form__user-progress {
+    grid-row: ~"3/4";
+    grid-column: ~"1/-1";
+  }
+
+  .form__user-progress ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .form__user-progress li {
+    width: 310px;
+  }
+
+  .form__user-message {
+    grid-row: ~"4/5";
+    grid-column: ~"1/-1";
+  }
+
+  .form__submit {
+    grid-row: ~"5/-1";
+    grid-column: ~"1/-1";
+  }
+
+  .form__note-hidden {
+    display: inline-block;
+  }
 }
