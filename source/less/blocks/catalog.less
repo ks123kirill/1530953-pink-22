@@ -1,8 +1,57 @@
 .catalog__list {
+  width: 280px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
 }
 
 .catalog__item {
-  padding: 0 0 20px 0;
+  width: 280px;
+  outline: 1px solid green;
+  outline-offset: -1px;
+  margin-bottom: 20px;
+}
+
+.catalog__panorama {
+  margin-bottom: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog__panorama {
+    margin-bottom: 50px;
+  }
+
+  .catalog__list {
+    width: 620px;
+  }
+
+  .catalog__item {
+    width: 300px;
+
+    &:not(:nth-of-type(2n)) {
+      margin-right: 20px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog__list {
+    width: 100%;
+  }
+
+  .catalog__item {
+    margin-bottom: 54px;
+
+    &:not(:nth-of-type(2n)) {
+      //Хак для разрешения войны переопределения
+      margin-right: 0;
+    }
+
+    &:not(:nth-of-type(3n)) {
+      margin-right: 20px;
+    }
+  }
 }
