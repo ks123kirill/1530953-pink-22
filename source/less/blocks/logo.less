@@ -1,18 +1,9 @@
-.logo {
+.logo__link {
+  position: relative;
   display: inline-block;
   vertical-align: top;
-  text-align: left;
-}
-
-.logo__link {
-  display: block;
   padding: 23px 20px;
   margin: 0;
-
-  &--header {
-    text-align: left;
-    box-shadow: inset 0 -1px 0 var(--basic-black);
-  }
 
   &--footer {
     text-align: center;
@@ -29,5 +20,34 @@
 
   &:active path {
     opacity: 0.3;
+  }
+}
+
+.logo__svg--tablet,
+.logo__svg--desktop {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .logo__link--header {
+    padding-top: 30px;
+  }
+
+  .logo__svg--mobile {
+    display: none;
+  }
+
+  .logo__svg--tablet {
+    display: block;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .logo__svg--tablet {
+    display: none;
+  }
+
+  .logo__svg--desktop {
+    display: block;
   }
 }
