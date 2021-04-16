@@ -3,13 +3,26 @@
   padding: 100px 0 50px 0;
 }
 
+.price__wrapper {
+  width: 320px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
 .price__table {
   border-collapse: collapse;
   border: 2px solid var(--basic-grey-dark);
   background-color: var(--basic-white);
   text-transform: uppercase;
-  // margin-left: -539px;
-  // margin-right: -261px;
+  box-sizing: border-box;
+  margin-left: -555px;
+  margin-right: -261px;
+
+  & th,
+  & td {
+    width: 276px;
+    border: 2px solid var(--basic-grey-dark);
+  }
 }
 
 .price__tariffs-empty {
@@ -18,7 +31,6 @@
 }
 
 .price__tariffs-name {
-  width: 276px;
   height: 94px;
   background-color: var(--basic-blue-dark);
   color: var(--basic-white);
@@ -33,29 +45,80 @@
   line-height: 30px;
 }
 
+.price__spec-name {
+  text-align: left;
+  padding-left: 15px;
+
+  &--repeat {
+    padding-left: 22px;
+  }
+}
+
 .price__spec-name,
 .price__spec-bool {
-  width: 276px;
+  position: relative;
   height: 60px;
   font-size: 14px;
   line-height: 30px;
   color: var(--basic-blue-dark);
+  text-align: left;
+}
+
+.price__spec-bool::after {
+  position: absolute;
+  content: "";
+  top: 18px;
+  right: 16px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+}
+
+.price__spec-bool {
+  &--true::after {
+    width: 31px;
+    height: 21px;
+    background-image: url("../img/char-yes.svg");
+  }
+
+  &--false::after {
+    width: 27px;
+    height: 27px;
+    background-image: url("../img/char-no.svg");
+  }
 }
 
 @media (min-width: @tablet-width) {
-  .price__table {
-    margin: 0 auto;
+  .price__wrapper {
+    padding: 0 20px;
+    width: 620px;
   }
 
-  .price__tariffs-name {
-    width: 153px;
+  .price__table {
+    margin: 0 auto;
+
+    & th,
+    & td {
+      width: 153px;
+      box-sizing: border-box;
+    }
   }
 
   .price__spec-name,
   .price__spec-bool {
-    width: 153px;
     height: 45px;
     text-transform: none;
+
+    &--repeat {
+      display: none;
+    }
+  }
+
+  .price__spec-bool::after {
+    top: 20%;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
   }
 
   .price__toggles {
@@ -64,15 +127,31 @@
 }
 
 @media (min-width: @desktop-width) {
+  .price__wrapper {
+    width: 1200px;
+    padding: 0 130px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    outline: 1px dotted red;
+    outline-offset: -1px;
+  }
+
+  .price__table {
+    & th,
+    & td {
+      width: 235px;
+    }
+  }
+
   .price__tariffs-name {
-    width: 235px;
+    // width: 235px;
     height: 94px;
     font-size: 18px;
   }
 
   .price__spec-name,
   .price__spec-bool {
-    width: 235px;
+    // width: 235px;
     height: 60px;
     font-size: 18px;
   }
