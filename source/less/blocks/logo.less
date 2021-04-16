@@ -23,31 +23,44 @@
   }
 }
 
-.logo__svg--tablet,
-.logo__svg--desktop {
+.logo__link--header .logo__img--tablet,
+.logo__link--header .logo__img--desktop,
+.logo__link--footer .logo__img--desktop {
   display: none;
 }
 
 @media (min-width: @tablet-width) {
   .logo__link--header {
     padding-top: 30px;
-  }
 
-  .logo__svg--mobile {
-    display: none;
-  }
+    & .logo__img--mobile {
+      display: none;
+    }
 
-  .logo__svg--tablet {
-    display: block;
+    & .logo__img--tablet {
+      display: block;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
-  .logo__svg--tablet {
-    display: none;
+  .logo__link--header {
+    & .logo__img--tablet {
+      display: none;
+    }
+
+    & .logo__img--desktop {
+      display: block;
+    }
   }
 
-  .logo__svg--desktop {
-    display: block;
+  .logo__link--footer {
+    & .logo__img--mobile {
+      display: none;
+    }
+
+    & .logo__img--desktop {
+      display: block;
+    }
   }
 }
