@@ -1,46 +1,86 @@
 .fieldset {
   border: none;
-  outline: 1px solid green;
-  outline-offset: -1px;
   padding: 0;
-  margin: 20px 0;
+  margin: 40px 0 0 0;
+
+  &--user-progress,
+  &--user-contacts,
+  &--user-platform,
+  &--user-message {
+    display: flex;
+    flex-direction: column;
+  }
 
   &--user-progress,
   &--user-platform {
     background-color: var(--basic-grey);
-
-    & legend { // Хак. Иначе не закрашивается область legend
-      background-color: var(--basic-grey);
-    }
   }
+}
+
+.fieldset__wrapper {
+  padding: 0 20px;
 }
 
 .fieldset__legend {
   display: block;
+  font-weight: normal;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
   color: var(--basic-red);
   text-align: left;
-  padding: 30px 10px 17px 23px;
+  padding: 0;
+  margin: 0;
+}
 
-  &--user-contacts {
-    display: none;
+// .fieldset:not(.fieldset--user-name) {
+//   display: flex;
+//   flex-direction: column;
+// }
+
+.fieldset__legend--title {
+  width: 100%;
+  position: relative;
+  align-self: center;
+  text-align: center;
+  background-color: var(--basic-grey);
+  padding-bottom: 50px;
+}
+
+.fieldset--user-name,
+.fieldset--user-contacts {
+  & span {
+    padding-left: 23px;
+  }
+
+  & .fieldset__input {
+    margin-top: 17px;
+    margin-bottom: 30px;
   }
 }
 
-.fieldset legend {
-  text-align: center;
+.fieldset__user-tel,
+.fieldset__user-email {
+  margin: 0;
+}
+
+.fieldset--user-contacts .fieldset__legend--title {
+  display: none;
+}
+
+.fieldset--user-message .fieldset__legend--title {
+  background-color: var(--basic-white);
+  padding-bottom: 22px;
 }
 
 .fieldset__input {
-  width: 276px;
+  width: 100%;
   height: 59px;
   font-size: 18px;
   line-height: 30px;
   box-sizing: border-box;
   border: 2px solid var(--basic-grey-dark);
-  border-radius: 1px;
+  border-radius: 3px;
   padding: 0;
   margin: 0;
 
@@ -62,7 +102,7 @@
 
 .fieldset__list {
   list-style: none;
-  padding: 0;
+  padding: 0 20px 0 20px; //вместо wrapper, потому что заморочка с background-color .fieldset__legend--title
   margin: 0;
 }
 
@@ -73,7 +113,7 @@
   box-sizing: border-box;
 }
 
-.fieldset textarea {
+.fieldset__textarea {
   width: 100%;
   font-size: 18px;
   line-height: 30px;
@@ -93,7 +133,151 @@
     background-color: var(--basic-white);
   }
 
-  .fieldset legend {
+  .fieldset__wrapper {
+    padding: 0;
+  }
+
+  .fieldset--user-contacts .fieldset__legend--title {
+    display: block;
+  }
+
+  .fieldset__list {
+    padding-left: 60px;
+  }
+
+  .fieldset__legend--title {
+    width: initial;
     background-color: var(--basic-white);
+    padding-left: 31px;
+    padding-right: 31px;
+    margin-top: -10px;
+
+    & br {
+      display: none;
+    }
+  }
+
+  .fieldset--user-name {
+    border: none;
+
+    & .fieldset__legend {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    & .fieldset__input {
+      margin-left: 20px;
+    }
+  }
+
+  .fieldset__user-tel,
+  .fieldset__user-email {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-bottom: 40px;
+    padding-right: 60px;
+    padding-left: 60px;
+
+    & .fieldset__legend {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 57px;
+        height: 55px;
+        top: -77px;
+        right: 2px;
+        background-color: var(--basic-grey-dark);
+        background-position: center;
+        background-size: auto;
+        background-repeat: no-repeat;
+      }
+    }
+
+    & .fieldset__input {
+      width: initial;
+      margin: 0 0 20px 0;
+      padding-right: 59px;
+    }
+
+    & span {
+      padding-left: 17px;
+    }
+  }
+
+  .fieldset__user-tel .fieldset__legend::after {
+    background-image: url("../img/icon-phone.svg");
+  }
+
+  .fieldset__user-email .fieldset__legend::after {
+    background-image: url("../img/icon-mail.svg");
+  }
+
+  .fieldset__textarea {
+    width: initial;
+    margin: 20px 55px 53px 55px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__user-progress {
+    & .fieldset__list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    & .fieldset__item {
+      width: 285px;
+
+      &:nth-of-type(1) {
+        order: 1;
+      }
+
+      &:nth-of-type(2) {
+        order: 4;
+      }
+
+      &:nth-of-type(3) {
+        order: 2;
+      }
+
+      &:nth-of-type(4) {
+        order: 5;
+      }
+
+      &:nth-of-type(5) {
+        order: 3;
+      }
+
+      &:nth-of-type(6) {
+        order: 6;
+      }
+    }
+  }
+
+  .fieldset--user-contacts {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    & .fieldset__legend--title {
+      margin-left: 350px; //justefy-self: center; не хочет работать
+      margin-right: 200px;
+    }
+  }
+
+  .fieldset__user-tel,
+  .fieldset__user-email {
+    flex-grow: 1;
+  }
+
+  .fieldset__user-email {
+    padding-left: 0;
   }
 }

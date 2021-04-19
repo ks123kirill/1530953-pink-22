@@ -1,5 +1,8 @@
 .form__button-submit {
   width: 100%;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
   text-transform: uppercase;
   color: var(--basic-white);
   background-color: var(--basic-green);
@@ -26,6 +29,7 @@
   font-size: 14px;
   line-height: 30px;
   text-transform: uppercase;
+  margin: 0 0 26px 0;
 }
 
 .form__note-star {
@@ -36,35 +40,17 @@
   display: none;
 }
 
-.form__user-name input {
-  width: calc(100% + 33px);
-  margin-left: -23px;
-}
-
-@media (min-width: @mobile-width + 1px) {
-  .form__user-name label {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 0 55px 0;
-  }
-
-  .form__user-name input {
-    margin: 0;
-  }
-}
-
 @media (min-width: @tablet-width) {
+  .form__wrapper {
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+
   .form {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;
-  }
-
-  .form__user-name label {
-    width: 620px;
   }
 
   .form__user-name {
@@ -81,6 +67,7 @@
 
   .form__user-progress {
     order: 4;
+    margin-bottom: 65px;
   }
 
   .form__user-message {
@@ -88,7 +75,7 @@
   }
 
   .form__button-submit {
-    width: 300px;
+    width: 296px;
   }
 
   .form__submit {
@@ -96,11 +83,15 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .form__wrapper {
+    padding: 0 130px;
+  }
+
   .form {
     display: grid;
     grid-template-columns: repeat(2, 435px);
@@ -130,18 +121,6 @@
   .form__user-progress {
     grid-row: ~"3/4";
     grid-column: ~"1/-1";
-  }
-
-  .form__user-progress ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
-
-  .form__user-progress li {
-    width: 310px;
   }
 
   .form__user-message {
