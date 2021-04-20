@@ -1,48 +1,92 @@
 .fieldset {
   border: none;
-  outline: 1px solid green;
-  outline-offset: -1px;
   padding: 0;
-  margin: 20px 0;
+  margin: 40px 0 0 0;
+  display: flex;
+  flex-direction: column;
 
   &--user-progress,
   &--user-platform {
     background-color: var(--basic-grey);
-
-    & legend { // Хак. Иначе не закрашивается область legend
-      background-color: var(--basic-grey);
-    }
   }
 }
 
+.fieldset--wrapper {
+  padding: 0 20px;
+}
+
 .fieldset__legend {
+  width: 100%;
+  position: relative;
+  align-self: center;
+  text-align: center;
   display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-red);
+  padding: 0;
+  margin: 0;
+  background-color: var(--basic-grey);
+  padding-bottom: 40px;
+}
+
+.fieldset__label {
+  display: block;
+  font-weight: normal;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
   color: var(--basic-red);
   text-align: left;
-  padding: 30px 10px 17px 23px;
+  padding: 0;
+  margin: 0;
+}
 
-  &--user-contacts {
-    display: none;
+.fieldset--user-name,
+.fieldset--user-contacts {
+  & .fieldset__brick {
+    padding: 0;
+    margin: 0 0 30px 0;
+  }
+
+  & .fieldset__label {
+    padding-left: 23px;
+    padding-bottom: 17px;
   }
 }
 
-.fieldset legend {
-  text-align: center;
+.fieldset--user-contacts .fieldset__legend {
+  display: none;
+}
+
+.fieldset--user-message .fieldset__legend {
+  background-color: var(--basic-white);
+  padding-bottom: 22px;
 }
 
 .fieldset__input {
-  width: 276px;
+  width: 100%;
   height: 59px;
   font-size: 18px;
   line-height: 30px;
   box-sizing: border-box;
   border: 2px solid var(--basic-grey-dark);
-  border-radius: 1px;
-  padding: 0;
+  border-radius: 3px;
+  padding: 0 0 0 22px;
   margin: 0;
+
+  &--textarea {
+    height: initial;
+    resize: none; /* Disables resizability */
+    padding: 22px 16px 22px 22px;
+  }
+
+  &::placeholder {
+    color: var(--basic-blue-dark);
+    margin: 0;
+  }
 
   &:hover {
     border-color: var(--basic-blue-dark);
@@ -54,15 +98,9 @@
   }
 }
 
-.fieldset__input::placeholder {
-  color: var(--basic-blue-dark);
-  padding: 0 0 0 20px;
-  margin: 0;
-}
-
 .fieldset__list {
   list-style: none;
-  padding: 0;
+  padding: 0 20px 0 20px; //вместо wrapper, потому что заморочка с background-color .fieldset__legend
   margin: 0;
 }
 
@@ -73,27 +111,157 @@
   box-sizing: border-box;
 }
 
-.fieldset textarea {
-  width: 100%;
-  font-size: 18px;
-  line-height: 30px;
-  color: var(--basic-blue-dark);
-  text-align: left;
-  box-sizing: border-box;
-  border: 2px solid var(--basic-grey-dark);
-  border-radius: 1px;
-  resize: none; /* Disables resizability */
-  padding: 22px 16px 22px 20px;
-  margin: 0;
-}
-
 @media (min-width: @tablet-width) {
   .fieldset {
     border: 2px solid var(--basic-grey);
     background-color: var(--basic-white);
   }
 
-  .fieldset legend {
+  .fieldset--wrapper {
+    padding: 0;
+  }
+
+  .fieldset--user-contacts .fieldset__legend {
+    display: block;
+  }
+
+  .fieldset__list {
+    padding-left: 60px;
+  }
+
+  .fieldset__legend {
+    width: initial;
     background-color: var(--basic-white);
+    padding-left: 31px;
+    padding-right: 31px;
+    margin-top: -10px;
+
+    & br {
+      display: none;
+    }
+  }
+
+  .fieldset--user-name {
+    border: none;
+
+    & .fieldset__brick {
+      height: 59px;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: baseline;
+    }
+
+    & .fieldset__label {
+      padding-left: 0;
+    }
+
+    & .fieldset__input {
+      margin-left: 20px;
+    }
+  }
+
+  .fieldset--user-contacts {
+    & .fieldset__brick {
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+  }
+
+  .fieldset__brick--tel,
+  .fieldset__brick--email {
+    display: flex;
+    flex-direction: column-reverse;
+
+    & .fieldset__label {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 57px;
+        height: 55px;
+        top: -77px;
+        right: 2px;
+        background-color: var(--basic-grey-dark);
+        background-position: center;
+        background-size: auto;
+        background-repeat: no-repeat;
+      }
+    }
+
+    & .fieldset__input {
+      width: initial;
+      margin: 0 0 20px 0;
+      padding-right: 59px;
+    }
+  }
+
+  .fieldset__brick--tel .fieldset__label::after {
+    background-image: url("../img/icon-phone.svg");
+  }
+
+  .fieldset__brick--email .fieldset__label::after {
+    background-image: url("../img/icon-mail.svg");
+  }
+
+  .fieldset__input--textarea {
+    width: initial;
+    margin: 20px 55px 53px 55px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .fieldset__list--desktop-order {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    & .fieldset__item {
+      width: 285px;
+    }
+
+    & :nth-of-type(1) {
+      order: 1;
+    }
+
+    & :nth-of-type(2) {
+      order: 4;
+    }
+
+    & :nth-of-type(3) {
+      order: 2;
+    }
+
+    & :nth-of-type(4) {
+      order: 5;
+    }
+
+    & :nth-of-type(5) {
+      order: 3;
+    }
+
+    & :nth-of-type(6) {
+      order: 6;
+    }
+  }
+
+  .fieldset--user-contacts {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-right: 60px;
+
+    & .fieldset__brick {
+      flex-grow: 1;
+      padding-right: 0;
+    }
+
+    & .fieldset__legend {
+      margin-left: 350px; //justefy-self: center; не хочет работать
+      margin-right: 200px;
+    }
   }
 }
