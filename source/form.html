@@ -50,7 +50,7 @@
               <a class="main-nav__link" href="catalog.html">Фотографии</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link main-nav__link--active main-nav__link--disabled" href="#">Конкурс</a>
+              <a class="main-nav__link main-nav__link--active" href="#">Конкурс</a>
             </li>
             <li class="main-nav__item">
               <a class="main-nav__link" href="https://up.htmlacademy.ru/">HTML Academy</a>
@@ -78,26 +78,27 @@
       <section class="main-form">
         <h1 class="visually-hidden">Регистрация на сервисе Pink</h1>
 
-        <form class="form form__wrapper" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="form__user-name fieldset fieldset--user-name fieldset__wrapper">
-
-            <label class="fieldset__legend fieldset__legend--label" for="user-surname"><span>Фамилия:</span>
+        <form class="form" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="form__user-name fieldset fieldset--user-name fieldset--wrapper">
+            <p class="fieldset__brick">
+              <label class="fieldset__label" for="user-surname">Фамилия:</label>
               <input class="fieldset__input" type="text" name="user-surname" id="user-surname" placeholder="Укажите фамилию*" required>
-            </label>
+            </p>
 
-            <label class="fieldset__legend fieldset__legend--label" for="user-name"><span>Имя:</span>
+            <p class="fieldset__brick">
+              <label class="fieldset__label" for="user-name">Имя:</label>
               <input class="fieldset__input" type="text" name="user-name" id="user-name" placeholder="Введите ваше имя*" required>
-            </label>
+            </p>
 
-            <label class="fieldset__legend fieldset__legend--label" for="user-patronymic"><span>Отчество:</span>
+            <p class="fieldset__brick">
+              <label class="fieldset__label" for="user-patronymic">Отчество:</label>
               <input class="fieldset__input" type="text" name="user-patronymic" id="user-patronymic" placeholder="Ну и отчество тоже">
-            </label>
-
+            </p>
           </fieldset>
 
           <fieldset class="form__user-progress fieldset fieldset--user-progress">
-            <h2 class="fieldset__legend fieldset__legend--title">Ваши безбашенные<br> достижения в путешествии</h2>
-            <ul class="fieldset__list">
+            <h2 class="fieldset__legend">Ваши безбашенные<br> достижения в путешествии</h2>
+            <ul class="fieldset__list fieldset__list--desktop-order">
               <li class="fieldset__item checkbox">
                 <input class="checkbox__input visually-hidden" type="checkbox" id="selfy-with-shark" name="selfy-with-shark" checked>
                 <label class="checkbox__label" for="selfy-with-shark">Сделал селфи с акулой</label>
@@ -129,21 +130,21 @@
             </ul>
           </fieldset>
 
-          <fieldset class="form__user-contacts fieldset fieldset--user-contacts fieldset__wrapper">
-            <h2 class="fieldset__legend fieldset__legend--title">Контактная информация</h2>
-            <p class="fieldset__user-tel">
-              <label class="fieldset__legend fieldset__legend--label" for="user-tel"><span>Номер телефона</span></label>
+          <fieldset class="form__user-contacts fieldset fieldset--user-contacts fieldset--wrapper">
+            <h2 class="fieldset__legend">Контактная информация</h2>
+            <p class="fieldset__brick fieldset__brick--tel">
+              <label class="fieldset__label" for="user-tel">Номер телефона</label>
               <input class="fieldset__input" type="tel" id="user-tel" name="user-tel" placeholder="Номер, пожалуйста">
             </p>
 
-            <p class="fieldset__user-email">
-              <label class="fieldset__legend fieldset__legend--label" for="user-email"><span>Адрес почты</span></label>
+            <p class="fieldset__brick fieldset__brick--email">
+              <label class="fieldset__label" for="user-email">Адрес почты</label>
               <input class="fieldset__input" type="email" id="user-email" name="user-email" placeholder="Введите почту *" required>
             </p>
           </fieldset>
 
           <fieldset class="form__user-platform fieldset fieldset--user-platform">
-            <h2 class="fieldset__legend fieldset__legend--title">С каким приложением<br> путешествовали?</h2>
+            <h2 class="fieldset__legend">С каким приложением<br> путешествовали?</h2>
             <ul class="fieldset__list">
               <li class="fieldset__item radio">
                 <input class="radio__input visually-hidden" type="radio" id="app-for-iOS" name="platform" value="app-for-iOS" checked>
@@ -162,13 +163,12 @@
             </ul>
           </fieldset>
 
-          <fieldset class="form__user-message fieldset fieldset--user-message fieldset__wrapper">
-            <h2 class="fieldset__legend fieldset__legend--title">Опишите свои эмоции</h2>
-            <textarea class="fieldset__textarea" name="user-message" cols="35" rows="5">Можно прям в красках, не стесняясь в выражениях
-            </textarea>
+          <fieldset class="form__user-message fieldset fieldset--user-message fieldset--wrapper">
+            <h2 class="fieldset__legend">Опишите свои эмоции</h2>
+            <textarea class="fieldset__input fieldset__input--textarea" name="user-message" cols="35" rows="5" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </fieldset>
 
-          <div class="form__submit fieldset__wrapper">
+          <div class="form__submit">
             <button class="button form__button-submit" type="submit">Отправить форму</button>
             <p class="form__note"><span class="form__note-star">*</span> — обязательные <span class="form__note-hidden">для заполнения</span> поля</p>
           </div>
