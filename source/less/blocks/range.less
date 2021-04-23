@@ -1,37 +1,61 @@
 .range {
+  max-width: 280px;
   box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0 auto;
 }
 
-// .range {
-//   display: flex;
-//   flex-wrap: wrap;
-//   justify-content: center;
-//   align-items: flex-start;
-// }
-
-// .range__label {
-//   &--crop {
-//     order: -3;
-//     margin-right: 35px;
-//   }
-
-//   &--fill {
-//     order: -2;
-//     margin-right: 35px;
-//   }
-
-//   &--contrast {
-//     order: -1;
-//   }
-// }
-
 .range__label {
-  width: 100%;
-  border-bottom: 5px solid var(--basic-grey);
-  // padding-bottom: 20px;
-  padding: 20px 20px;
-  margin-bottom: 20px;
-  box-sizing: border-box;
+  position: relative;
+  margin: 0 0 62px 0;
+
+  &--crop,
+  &--fill {
+    margin-right: 35px;
+  }
+
+  &--contrast {
+    margin-bottom: 117px;
+  }
+}
+
+.range__label::after {
+  position: absolute;
+  content: "";
+  width: 320px;
+  height: 1px;
+  background-color: var(--special-blue-light-opacity);
+  top: 123px;
+  left: -59px;
+}
+
+.range__label--fill::after,
+.range__label--contrast::after {
+  display: none;
+}
+
+.range__img {
+  & path {
+    fill-opacity: 0.3;
+  }
+
+  &--active path {
+    fill-opacity: initial;
+    fill: var(--basic-red);
+  }
+}
+
+.range__label-button {
+  width: 44px;
+  height: 44px;
+  background-color: transparent;
+
+  &:hover path {
+    fill-opacity: 0.5;
+  }
 }
 
 .range__toggle {
@@ -43,6 +67,12 @@
   cursor: pointer;
   box-sizing: border-box;
   box-shadow: inset 1px 2px 1px #000000;
+
+  &--crop {
+    position: absolute;
+    top: 80px;
+    left: -20px;
+  }
 
   &--fill,
   &--contrast {
@@ -68,6 +98,10 @@
   border-radius: 50%;
   background: #ffffff;
   cursor: pointer;
+
+  &:active {
+    background-color: var(--basic-red);
+  }
 }
 
 /* All the same stuff for Firefox */
@@ -78,19 +112,107 @@
   border-radius: 50%;
   background: #ffffff;
   cursor: pointer;
+
+  &:active {
+    background-color: var(--basic-red);
+  }
 }
 
-/* All the same stuff for IE */
-.range__toggle::-ms-thumb {
-  border: 2px solid var(--basic-red);
-  height: 14px;
-  width: 14px;
-  border-radius: 50%;
-  background: #ffffff;
-  cursor: pointer;
+.range__add-button {
+  width: 280px;
+  height: 56px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 15px;
+  text-align: center;
+  border: 3px solid;
+  box-sizing: border-box;
+  border-radius: 30px;
+  padding: 16px;
+
+  &--post {
+    color: var(--basic-red);
+    border-color: var(--basic-red);
+    margin-bottom: 12px;
+
+    &:hover,
+    &:focus {
+      color: var(--basic-white);
+      background-color: var(--basic-red);
+    }
+
+    &:active {
+      color: var(--special-white-opacity);
+    }
+  }
+
+  &--repeal {
+    color: var(--special-blue-light-opacity);
+    border-color: var(--special-blue-light-opacity);
+
+    &:hover,
+    &:focus {
+      color: var(--special-blue-opacity);
+      border-color: var(--special-blue-opacity);
+    }
+
+    &:active {
+      color: var(--special-white-opacity);
+      background-color: var(--special-blue-opacity);
+      border-color: transparent;
+    }
+  }
 }
 
 @media (min-width: @tablet-width) {
+  .range {
+    max-width: initial;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+  }
+
+  .range__label {
+    display: flex;
+    align-items: center;
+    margin: 0 0 35px 0;
+
+    &::after {
+      display: initial;
+      width: 275px;
+      top: 62px;
+      left: 15px;
+    }
+  }
+
+  .range__toggle--crop {
+    position: initial;
+  }
+
+  .range__img {
+    & path {//Временное решение для соответствия макету (до подключения JS)
+      fill-opacity: initial;
+      fill: var(--basic-red);
+    }
+
+    &--crop {
+      width: 22px;
+      height: 22px;
+    }
+
+    &--fill {
+      width: 24px;
+      height: 22px;
+    }
+
+    &--contrast {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
   .range__toggle {
     width: 202px;
 
@@ -99,10 +221,48 @@
       display: block;
     }
   }
+
+  .range__add-button--post {
+    margin-top: 40px;
+  }
 }
 
 @media (min-width: @desktop-width) {
+  .range {
+    position: relative;
+  }
+
   .range__toggle {
     width: 288px;
+  }
+
+  .range__img {
+    width: initial;
+    height: initial;
+  }
+
+  .range__label-button {
+    margin-right: 48px;
+  }
+
+  .range__label::after {
+    width: 410px;
+    left: 0;
+  }
+
+  .range__add-button {
+    width: 183px;
+
+    &--repeal {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
+    &--post {
+      align-self: flex-start;
+      margin-top: 114px;
+      margin-bottom: 0;
+    }
   }
 }

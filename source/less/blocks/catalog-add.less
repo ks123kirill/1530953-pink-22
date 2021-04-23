@@ -1,123 +1,53 @@
 .catalog-add {
   background-color: var(--basic-grey);
+  padding-bottom: 40px;
+}
+
+.catalog-add__photo {
+  margin-bottom: 40px;
 }
 
 .catalog-add__img {
   width: 280px;
   height: 374px;
   object-fit: contain;
-  margin: 0 0 40px 0;
+  margin: 0;
   background-color: var(--basic-blue-dark);
-}
-
-.catalog-add__button {
-  width: 280px;
-  height: 56px;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 15px;
-  text-align: center;
-  border: 3px solid;
-  box-sizing: border-box;
-  border-radius: 30px;
-  padding: 16px;
-  margin-bottom: 12px;
-
-  &--post {
-    color: var(--basic-red);
-    border-color: var(--basic-red);
-
-    &:hover,
-    &:focus {
-      color: var(--basic-white);
-      background-color: var(--basic-red);
-    }
-
-    &:active {
-      color: var(--special-white-opacity);
-    }
-  }
-
-  &--canсel {
-    color: var(--special-blue-light-opacity);
-    border-color: var(--special-blue-light-opacity);
-
-    &:hover,
-    &:focus {
-      color: var(--special-blue-opacity);
-      border-color: var(--special-blue-opacity);
-    }
-
-    &:active {
-      color: var(--special-white-opacity);
-      background-color: var(--special-blue-opacity);
-      border-color: transparent;
-    }
-  }
 }
 
 @media (min-width: @tablet-width) {
   .catalog-add {
-    padding-top: 55px;
-    padding-bottom: 55px;
-  }
-
-  .catalog-add__photo {
-    width: 620px;
+    padding: 55px 20px;
     box-sizing: border-box;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 100px);
     grid-gap: 0 20px;
     margin: 0 auto;
     outline: 1px dotted black;
   }
 
-  .catalog-add__range {
-    height: 200px;
-    grid-column: ~"2/-1";
+  .catalog-add__photo {
+    height: min-content;
+    margin-bottom: 0;
   }
 
-  .catalog-add__button {
-    &--post {
-      grid-column: ~"2/-1";
-      grid-row: ~"3/4";
-    }
+  .catalog-add__img {
+    width: 300px;
+    height: 400px;
+    object-fit: contain;
+  }
 
-    &--canсel {
-      grid-column: ~"2/-1";
-      grid-row: ~"4/5";
-    }
+  .catalog-add__range {
+    grid-column: ~"2/-1";
   }
 }
 
 @media (min-width: @desktop-width) {
-  .catalog-add__photo {
+  .catalog-add {
     width: 940px;
     grid-template-columns: 300px 410px;
-    grid-template-rows: 200px 100px 100px;
     grid-gap: 0 90px;
-    padding: 0 60px 0 80px;
-    margin: 0;
-  }
-
-  .catalog-add__range {
-    height: 200px;
-    grid-column: ~"2/-1";
-  }
-
-  .catalog-add__button {
-    width: 183px;
-
-    &--post {
-      grid-column: ~"2/-1";
-      grid-row: ~"3/-1";
-    }
-
-    &--canсel {
-      grid-column: ~"2/-1";
-      grid-row: ~"3/-1";
-      margin-left: 230px;
-    }
+    padding-left: 80px;
+    padding-right: 60px;
   }
 }
