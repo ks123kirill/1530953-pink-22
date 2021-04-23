@@ -4,6 +4,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  padding-top: 66px; // Компенсация для .page-main: margin-top: -66px;
 }
 
 .promo__title {
@@ -17,6 +18,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .promo {
+    padding-top: 107px; // Компенсация для .page-main: margin-top: -107px;
+  }
+
   .promo__title {
     font-weight: 300;
     font-size: 50px;
