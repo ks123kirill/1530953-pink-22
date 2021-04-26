@@ -1,11 +1,22 @@
 .app-download {
   color: var(--basic-white);
   background-color: var(--basic-blue-darken);
-  background-image: url("../img/background-town-hand.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: top;
+  box-sizing: border-box;
+}
+
+.app-download__bg {
+  min-height: 462px;
+  background-image: url("../img/bg-hand-promo-mobile.png"), url("../img/bg-town-promo-mobile.png");
+  background-repeat: no-repeat, no-repeat;
+  background-size: auto, cover;
+  background-position: bottom, bottom;
+  box-sizing: border-box;
   padding-top: 66px; // Компенсация для .page-main: margin-top: -66px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/bg-hand-promo-mobile@2x.png"), url("../img/bg-town-promo-mobile@2x.png");
+    background-size: 320px auto, cover;
+  }
 }
 
 .app-download__block {
@@ -13,6 +24,7 @@
   flex-direction: column;
   justify-content: stretch;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .app-download__link {
@@ -51,8 +63,8 @@
   font-weight: 300;
   font-size: 24px;
   line-height: 120%;
-  padding: 30px 0 455px 0;
-  margin: 0;
+  padding: 0 0 350px 0;
+  margin: -378px 0 0 0;
 }
 
 .app-download__link-group {
@@ -77,7 +89,22 @@
 
 @media (min-width: @tablet-width) {
   .app-download {
-    padding-top: 107px; // Компенсация для .page-main: margin-top: -107px;
+    min-height: 730px;
+    padding-top: 110px; // Компенсация для .page-main: margin-top: -107px;
+
+    background-image: url("../img/bg-hand-promo-tablet.png"), url("../img/bg-town-promo-tablet.png");
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto, cover;
+    background-position: bottom, bottom;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg-hand-promo-tablet@2x.png"), url("../img/bg-town-promo-tablet@2x.png");
+      background-size: 660px auto, cover;
+    }
+  }
+
+  .app-download__bg {
+    display: none;
   }
 
   .app-download__block {
@@ -87,7 +114,8 @@
   .app-download__slogan {
     width: 245px;
     font-size: 40px;
-    padding: 200px 0 40px 0;
+    padding: 92px 0 40px 20px;
+    margin-top: 0;
   }
 
   .app-download__link-group a:first-of-type {
@@ -95,18 +123,37 @@
   }
 
   .app-download__availability {
+    font-size: 18px;
     margin: 0 0 120px 0;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .app-download {
+    min-height: 853px;
+
+    background-image: url("../img/bg-hand-promo-desktop.png"), url("../img/bg-town-promo-desktop.png");
+    background-size: auto, cover;
+    background-position: bottom, center;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg-hand-promo-desktop@2x.png"), url("../img/bg-town-promo-desktop@2x.png");
+      background-size: 1050px auto, cover;
+    }
+  }
+
   .app-download__link--default {
     font-size: 21px;
     line-height: 18px;
+    margin-bottom: 60px;
   }
 
   .app-download__slogan {
     font-size: 50px;
     line-height: 68px;
+  }
+
+  .app-download__link-group {
+    margin-bottom: 50px;
   }
 }
