@@ -1,25 +1,34 @@
 .app-download {
+  position: relative;
+  z-index: 1;
   color: var(--basic-white);
   background-color: var(--basic-blue-darken);
   box-sizing: border-box;
-}
-
-.app-download__bg {
-  min-height: 462px;
-  background-image: url("../img/bg-hand-promo-mobile.png"), url("../img/bg-town-promo-mobile.png");
-  background-repeat: no-repeat, no-repeat;
-  background-size: auto, cover;
-  background-position: bottom, bottom;
-  box-sizing: border-box;
+  background-image: url("../img/bg-town-promo-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 463px; // изображение города приемлимо искажается между брейкпоинтами
+  background-position: top;
   padding-top: 66px; // Компенсация для .page-main: margin-top: -66px;
 
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/bg-hand-promo-mobile@2x.png"), url("../img/bg-town-promo-mobile@2x.png");
-    background-size: 320px auto, cover;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -323px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-image: url("../img/bg-hand-promo-mobile.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: bottom;
   }
 }
 
 .app-download__block {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: stretch;
@@ -64,7 +73,7 @@
   font-size: 24px;
   line-height: 120%;
   padding: 0 0 350px 0;
-  margin: -378px 0 0 0;
+  margin: 45px 0 0 0;
 }
 
 .app-download__link-group {
@@ -87,24 +96,28 @@
   margin: 0 0 40px 0;
 }
 
+@media (min-resolution: 2dppx) {
+  .app-download {
+    background-image: url("../img/bg-town-promo-mobile@2x.jpg");
+
+    &::before {
+      background-image: url("../img/bg-hand-promo-mobile@2x.png");
+      background-size: 320px auto;
+    }
+  }
+}
+
 @media (min-width: @tablet-width) {
   .app-download {
     min-height: 730px;
     padding-top: 110px; // Компенсация для .page-main: margin-top: -107px;
+    background-image: url("../img/bg-town-promo-tablet.jpg");
+    background-size: cover;
 
-    background-image: url("../img/bg-hand-promo-tablet.png"), url("../img/bg-town-promo-tablet.png");
-    background-repeat: no-repeat, no-repeat;
-    background-size: auto, cover;
-    background-position: bottom, bottom;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/bg-hand-promo-tablet@2x.png"), url("../img/bg-town-promo-tablet@2x.png");
-      background-size: 660px auto, cover;
+    &::before {
+      background-image: url("../img/bg-hand-promo-tablet.png");
+      top: 0;
     }
-  }
-
-  .app-download__bg {
-    display: none;
   }
 
   .app-download__block {
@@ -128,17 +141,24 @@
   }
 }
 
+@media (min-width: @tablet-width) and (min-resolution: 2dppx) {
+  .app-download {
+    background-image: url("../img/bg-town-promo-tablet@2x.jpg");
+
+    &::before {
+      background-image: url("../img/bg-hand-promo-tablet@2x.png");
+      background-size: 660px auto;
+    }
+  }
+}
+
 @media (min-width: @desktop-width) {
   .app-download {
     min-height: 853px;
+    background-image: url("../img/bg-town-promo-desktop.jpg");
 
-    background-image: url("../img/bg-hand-promo-desktop.png"), url("../img/bg-town-promo-desktop.png");
-    background-size: auto, cover;
-    background-position: bottom, center;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/bg-hand-promo-desktop@2x.png"), url("../img/bg-town-promo-desktop@2x.png");
-      background-size: 1050px auto, cover;
+    &::before {
+      background-image: url("../img/bg-hand-promo-desktop.png");
     }
   }
 
@@ -155,5 +175,16 @@
 
   .app-download__link-group {
     margin-bottom: 50px;
+  }
+}
+
+@media (min-width: @desktop-width) and (min-resolution: 2dppx) {
+  .app-download {
+    background-image: url("../img/bg-town-promo-desktop@2x.jpg");
+
+    &::before {
+      background-image: url("../img/bg-hand-promo-desktop@2x.png");
+      background-size: 1050px auto;
+    }
   }
 }
