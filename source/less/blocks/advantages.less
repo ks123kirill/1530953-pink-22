@@ -1,6 +1,5 @@
 .advantages__block-slogan {
   padding-top: 45px;
-  padding-bottom: 70px;
 }
 
 .advantages__slogan {
@@ -10,39 +9,21 @@
   margin: 0;
 }
 
-.advantages__block-list {
-  background-color: var(--basic-white);
-  background-image: url("../img/background-grey-mobile.svg");
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .advantages__slogan:first-of-type {
   margin-bottom: 20px;
 }
 
-.advantages__list {
-  position: relative;
-  list-style: none;
+.advantages__block-list {
   padding-top: 130px;
   padding-bottom: 300px;
+  background-image: url("../img/iphone-smile-mobile.png"), url("../img/background-grey-mobile.svg");
+  background-position: center bottom -40px, top;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 157px auto, cover;
+}
 
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: -35px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    width: 157px;
-    height: 320px;
-    background-color: transparent;
-    background-image: url("../img/iphone-smile.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
+.advantages__list {
+  list-style: none;
 }
 
 .advantages__item {
@@ -69,11 +50,13 @@
   margin: 0;
 }
 
-@media (min-width: @tablet-width) {
+@media (min-resolution: 2dppx) {
   .advantages__block-list {
-    background-image: url("../img/background-grey-tablet.svg");
+    background-image: url("../img/iphone-smile-mobile@2x.png"), url("../img/background-grey-mobile.svg");
   }
+}
 
+@media (min-width: @tablet-width) {
   .advantages__slogan {
     font-size: 40px;
     line-height: 54px;
@@ -83,24 +66,21 @@
     margin-bottom: 10px;
   }
 
+  .advantages__block-list {
+    padding-bottom: 0;
+    background-image: url("../img/iphone-smile-mobile.png"), url("../img/background-grey-tablet.svg");
+    background-position: left 20px top 30px, top;
+    background-size: 268px auto, cover;
+  }
+
   .advantages__list {
     display: grid;
     grid-template-columns: 50% 50%;
     text-align: left;
-    padding-bottom: 0;
-
-    &::after {
-      width: 268px;
-      height: 547px;
-      top: 45px;
-      left: 20px;
-      margin: 0;
-    }
   }
 
   .advantages__item {
     grid-column: ~"2/-1";
-    // margin-bottom: 40px;
 
     &--full-screen {
       grid-column: ~"1/-1";
@@ -146,9 +126,15 @@
   }
 }
 
-@media (min-width: @desktop-width) {
+@media (min-width: @tablet-width) and (min-resolution: 2dppx) {
   .advantages__block-list {
-    background-image: url("../img/background-grey-desktop.svg");
+    background-image: url("../img/iphone-smile-tablet@2x.png"), url("../img/background-grey-tablet.svg");
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages__block-slogan {
+    padding-bottom: 70px;
   }
 
   .advantages__slogan {
@@ -156,23 +142,23 @@
     line-height: 68px;
   }
 
+  .advantages__block-list {
+    background-image: url("../img/iphone-smile-desktop.png"), url("../img/background-grey-tablet.svg");
+    background-position: top, top;
+    background-size: 940px auto, cover;
+  }
+
   .advantages__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-
-    &::after {
-      display: none;
-    }
   }
 
   .advantages__title {
-    position: relative;
     font-size: 30px;
     line-height: 30px;
-    padding-top: 55px;
+    padding-top: 20px;
     padding-bottom: 20px;
     background-color: var(--basic-grey);
-    z-index: 3;
   }
 
   .advantages__description {
@@ -181,60 +167,15 @@
   }
 
   .advantages__item {
-    position: relative;
     padding: 0 35px;
     text-align: center;
     grid-column: initial;
     padding-top: 200px;
 
-    &:not(.advantages__item--full-screen)::before {
-      position: absolute;
-      content: "";
-      width: 186px;
-      height: 382px;
-      background-image:
-        url("../img/iphone-screen-1.png"),
-        url("../img/iphone-desktop.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: auto; // это норм?? Иначе плохо ложится скрин на телефон
-      top: -100px;
-      left: 64px;
-      z-index: 2;
-    }
-
-    &:nth-of-type(2)::before {
-      background-image:
-        url("../img/iphone-screen-2.png"),
-        url("../img/iphone-desktop.png");
-    }
-
-    &:nth-of-type(3)::before {
-      background-image:
-        url("../img/iphone-screen-3.png"),
-        url("../img/iphone-desktop.png");
-    }
-
-    &:not(.advantages__item--full-screen)::after {
-      position: absolute;
-      content: "";
-      width: 300px;
-      height: 17px;
-      background-image: url("../img/iphone-shadow.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: auto;
-      bottom: 237px;
-      left: 15px;
-      z-index: 1;
-    }
-
     &--full-screen {
       grid-column: ~"1/-1";
       text-align: left;
       background-color: var(--basic-grey);
-      // outline: 1px solid green;
-      // outline-offset: -1px;
       padding: 115px 0 80px 375px;
       margin: 0;
 
@@ -257,5 +198,11 @@
   .advantages__link {
     font-size: 18px;
     line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) and (min-resolution: 2dppx) {
+  .advantages__block-list {
+    background-image: url("../img/iphone-smile-desktop@2x.png"), url("../img/background-grey-desktop.svg");
   }
 }

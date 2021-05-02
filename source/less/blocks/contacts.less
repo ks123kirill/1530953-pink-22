@@ -1,5 +1,5 @@
 .contacts {
-  padding: 50px 0;
+  padding: 50px 0 0 0;
 }
 
 .contacts__us {
@@ -10,7 +10,11 @@
 }
 
 .contacts__item {
-  margin-bottom: 30px;
+  margin-bottom: 35px;
+
+  &:last-of-type {
+    margin-bottom: 40px;
+  }
 }
 
 .contacts__caption {
@@ -51,17 +55,21 @@ a.contacts__info {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-
-    & div:first-of-type {
-      margin-left: 47px;
-      margin-right: 90px;
-    }
   }
 
   .contacts__us {
     width: 100%;
     font-size: 40px;
     line-height: 54px;
+  }
+
+  .contacts__item {
+    margin-left: 47px;
+    margin-right: 40px;
+
+    &:last-of-type {
+      margin-bottom: 30px;
+    }
   }
 }
 
@@ -72,5 +80,9 @@ a.contacts__info {
 
   .contacts__item {
     margin: 0 30px;
+
+    &:last-of-type {
+      margin-bottom: 20px;
+    }
   }
 }
