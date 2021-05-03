@@ -6,6 +6,31 @@
   padding: 0;
 }
 
+.button--form {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: var(--basic-white);
+  background-color: var(--basic-green);
+  padding: 20px;
+
+  &:hover,
+  &:focus {
+    background-color: var(--basic-green-dark);
+  }
+
+  &:active {
+    background-color: var(--basic-green-dark);
+    color: var(--special-white-opacity);
+    outline: transparent;
+  }
+
+  &:disabled {
+    background-color: var(--basic-grey);
+  }
+}
+
 // .button--hamburger {
 //   display: none;
 // }

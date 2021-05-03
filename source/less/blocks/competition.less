@@ -1,9 +1,9 @@
 .competition {
   background-color: var(--basic-blue-darken);
-  background-image: url("../img/back-town.png");
+  background-image: url("../img/bg-town-promo-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: top;
   padding-top: 66px; // Компенсация для .page-main: margin-top: -66px;
 }
 
@@ -17,9 +17,16 @@
   margin: 0;
 }
 
+@media (min-resolution: 2dppx) {
+  .competition {
+    background-image: url("../img/bg-town-promo-mobile@2x.jpg");
+  }
+}
+
 @media (min-width: @tablet-width) {
   .competition {
     padding-top: 107px; // Компенсация для .page-main: margin-top: -107px;
+    background-image: url("../img/bg-town-promo-tablet.jpg");
   }
 
   .competition__text {
@@ -29,8 +36,24 @@
   }
 }
 
+@media (min-width: @tablet-width) and (min-resolution: 2dppx) {
+  .competition {
+    background-image: url("../img/bg-town-promo-tablet@2x.jpg");
+  }
+}
+
 @media (min-width: @desktop-width) {
+  .competition {
+    background-image: url("../img/bg-town-promo-desktop.jpg");
+  }
+
   .competition__text {
     padding: 80px 90px;
+  }
+}
+
+@media (min-width: @desktop-width) and (min-resolution: 2dppx) {
+  .competition {
+    background-image: url("../img/bg-town-promo-desktop@2x.jpg");
   }
 }

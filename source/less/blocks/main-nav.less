@@ -109,10 +109,16 @@
   &:active {
     color: var(--special-red-opacity);
   }
+}
 
-  // &--disabled {
-  //   pointer-events: none;
-  // }
+@media (max-width: @desktop-width - 1px) {
+  .main-nav--closed .main-nav__item {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
 }
 
 @media (min-width: @desktop-width) {
