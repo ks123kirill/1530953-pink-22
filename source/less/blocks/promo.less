@@ -1,10 +1,11 @@
 .promo {
-  background-color: var(--basic-blue-dark);
-  background-image: url("../img/back-town.png");
-  background-position: center;
+  background-color: var(--basic-blue-darken);
+  background-image: url("../img/bg-town-promo-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 66px; // Компенсация для .page-main: margin-top: -66px;
+  background-position: top;
+  padding-top: 100px;
+  padding-bottom: 64px;
 }
 
 .promo__title {
@@ -13,18 +14,51 @@
   line-height: 33px;
   text-align: center;
   color: var(--basic-white);
-  padding-top: 64px;
-  padding-bottom: 64px;
+  margin: 0;
+}
+
+@media (min-resolution: 2dppx) {
+  .promo {
+    background-image: url("../img/bg-town-promo-mobile@2x.jpg");
+  }
 }
 
 @media (min-width: @tablet-width) {
   .promo {
-    padding-top: 107px; // Компенсация для .page-main: margin-top: -107px;
+    padding-top: 160px;
+    padding-bottom: 100px;
+    background-image: url("../img/bg-town-promo-tablet.jpg");
   }
 
   .promo__title {
     font-weight: 300;
     font-size: 50px;
     line-height: 68px;
+
+    & br {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) and (min-resolution: 2dppx) {
+  .promo {
+    background-image: url("../img/bg-town-promo-tablet@2x.jpg");
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo {
+    background-image: url("../img/bg-town-promo-desktop.jpg");
+  }
+
+  .promo__title br {
+    display: block;
+  }
+}
+
+@media (min-width: @desktop-width) and (min-resolution: 2dppx) {
+  .promo {
+    background-image: url("../img/bg-town-promo-desktop@2x.jpg");
   }
 }

@@ -4,6 +4,10 @@
   color: var(--basic-blue-dark);
   padding: 54px 0;
   margin: 0;
+
+  & br {
+    display: none;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -16,5 +20,9 @@
 @media (min-width: @desktop-width) {
   .intro__text {
     padding: 95px 0;
+
+    & br {
+      display: block;
+    }
   }
 }
