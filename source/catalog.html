@@ -238,12 +238,12 @@
         <form class="catalog-add__range range" action="https://echo.htmlacademy.ru" method="post">
 
           <p class="range__label range__label--crop">
-            <label class="range__label-button" for="range-crop">
+            <button class="button range__label-button" type="button">
               <svg class="range__img range__img--crop range__img--active" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M32 28H36V12C36 10.9391 35.5786 9.92172 34.8284 9.17157C34.0783 8.42143 33.0609 8 32 8H16V12H32V28ZM12 32V0H8V8H0V12H8V32C8 33.0609 8.42143 34.0783 9.17157 34.8284C9.92172 35.5786 10.9391 36 12 36H32V44H36V36H44V32H12Z" fill="#283645"/>
               </svg>
-            </label>
-            <!-- <label class="visually-hidden" for="range-crop"></label> -->
+            </button>
+            <label class="visually-hidden" for="range-crop"></label>
             <input class="range__toggle range__toggle--crop" id="range-crop" type="range" name="range-toggle-size" min="10" max="100" step="1" value="90">
           </p>
 
@@ -254,7 +254,8 @@
                 <path d="M48 40H0V43H48V40Z" fill="#283645"/>
               </svg>
             </button>
-            <input class="range__toggle range__toggle--fill" type="range" name="range-fill" min="10" max="100" step="1" value="20">
+            <label class="visually-hidden" for="range-fill"></label>
+            <input class="range__toggle range__toggle--fill" type="range" name="range-fill" id="range-fill" min="10" max="100" step="1" value="20">
           </p>
 
           <p class="range__label range__label--contrast">
@@ -264,7 +265,8 @@
                 <path d="M16 24.29C18.1536 24.1422 20.1708 23.1824 21.644 21.6046C23.1172 20.0268 23.9366 17.9486 23.9366 15.79C23.9366 13.6314 23.1172 11.5532 21.644 9.97538C20.1708 8.39759 18.1536 7.43782 16 7.29" fill="#283645"/>
               </svg>
             </button>
-            <input class="range__toggle range__toggle--contrast" type="range" name="range-contrast" min="10" max="100" step="1" value="50">
+            <label class="visually-hidden" for="range-contrast"></label>
+            <input class="range__toggle range__toggle--contrast" type="range" name="range-contrast" id="range-contrast" min="10" max="100" step="1" value="50">
           </p>
 
           <button class="button range__add-button range__add-button--post" type="submit">Запостить</button>
