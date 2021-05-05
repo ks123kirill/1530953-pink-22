@@ -1,6 +1,5 @@
 .app-download {
   position: relative;
-  z-index: 1;
   color: var(--basic-white);
   background-color: var(--basic-blue-darken);
   box-sizing: border-box;
@@ -8,7 +7,7 @@
   background-repeat: no-repeat;
   background-size: 100% 463px; // изображение города приемлимо искажается между брейкпоинтами
   background-position: top;
-  padding-top: 66px; // Компенсация для .page-main: margin-top: -66px;
+  padding-top: 66px; // Компенсация для .main-header--js {position: absolute;}
 
   &::before {
     content: "";
@@ -110,7 +109,7 @@
 @media (min-width: @tablet-width) {
   .app-download {
     min-height: 730px;
-    padding-top: 110px; // Компенсация для .page-main: margin-top: -107px;
+    padding-top: 110px; //  Компенсация для .main-header--js {position: absolute;}
     background-image: url("../img/bg-town-promo-tablet.jpg");
     background-size: cover;
 
