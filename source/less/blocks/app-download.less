@@ -5,16 +5,16 @@
   box-sizing: border-box;
   background-image: url("../img/bg-town-promo-mobile.jpg");
   background-repeat: no-repeat;
-  background-size: 100% 463px; // изображение города приемлимо искажается между брейкпоинтами
+  background-size: 100% 458px; // изображение города приемлимо искажается между брейкпоинтами
   background-position: top;
-  padding-top: 66px; // Компенсация для .main-header--js {position: absolute;}
+  padding-top: 70px;
 
   &::before {
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
-    top: -323px;
+    top: -275px;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -71,8 +71,8 @@
   font-weight: 300;
   font-size: 24px;
   line-height: 120%;
-  padding: 0 0 350px 0;
-  margin: 45px 0 0 0;
+  padding: 0 0 343px 0;
+  margin: 21px 0 0 0;
 }
 
 .app-download__link-group {
@@ -80,7 +80,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-end;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 
   & a:not(:last-child) {
     margin-right: 35px;
@@ -92,7 +92,7 @@
   font-size: 14px;
   line-height: 24px;
   padding: 0;
-  margin: 0 0 40px 0;
+  margin: 0 0 31px 0;
 }
 
 @media (min-resolution: 2dppx) {
@@ -109,7 +109,7 @@
 @media (min-width: @tablet-width) {
   .app-download {
     min-height: 730px;
-    padding-top: 110px; //  Компенсация для .main-header--js {position: absolute;}
+    padding-top: 110px;
     background-image: url("../img/bg-town-promo-tablet.jpg");
     background-size: cover;
 
@@ -158,6 +158,7 @@
 
     &::before {
       background-image: url("../img/bg-hand-promo-desktop.png");
+      background-size: 940px auto;
     }
   }
 
@@ -170,10 +171,15 @@
   .app-download__slogan {
     font-size: 50px;
     line-height: 68px;
+    padding-top: 140px;
   }
 
   .app-download__link-group {
     margin-bottom: 50px;
+  }
+
+  .app-download__availability {
+    margin-bottom: 77px;
   }
 }
 
@@ -183,7 +189,7 @@
 
     &::before {
       background-image: url("../img/bg-hand-promo-desktop@2x.png");
-      background-size: 1050px auto;
+      background-size: 940px auto;
     }
   }
 }

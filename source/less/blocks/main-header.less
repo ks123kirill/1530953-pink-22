@@ -1,5 +1,7 @@
 .main-header {
-  min-height: 66px;
+  position: relative;
+  z-index: 2;
+  min-height: 62px;
   color: var(--basic-white);
   background-color: var(--basic-blue-dark);
   text-align: left;
@@ -7,21 +9,12 @@
   // outline-offset: -5px;
 }
 
-.main-header--js {
-  position: absolute;
-  z-index: 2;
-  width: 100%;
-}
-
 .main-header--opacity {
   background-color: var(--special-black-opacity);
 }
 
 @media (min-width: @desktop-width) {
-  .main-header { //дублирование свойств .main-header--js
-    position: absolute;
-    z-index: 2;
-    width: 100%;
+  .main-header {
     background-color: var(--special-black-opacity);
   }
 
