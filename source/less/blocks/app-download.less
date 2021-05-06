@@ -7,14 +7,14 @@
   background-repeat: no-repeat;
   background-size: 100% 458px; // изображение города приемлимо искажается между брейкпоинтами
   background-position: top;
-  padding-top: 66px; // Компенсация для .main-header--js {position: absolute;}
+  padding-top: 70px;
 
   &::before {
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
-    top: -271px;
+    top: -275px;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -109,7 +109,7 @@
 @media (min-width: @tablet-width) {
   .app-download {
     min-height: 730px;
-    padding-top: 110px; //  Компенсация для .main-header--js {position: absolute;}
+    padding-top: 110px;
     background-image: url("../img/bg-town-promo-tablet.jpg");
     background-size: cover;
 
@@ -158,6 +158,7 @@
 
     &::before {
       background-image: url("../img/bg-hand-promo-desktop.png");
+      background-size: 940px auto;
     }
   }
 
@@ -170,10 +171,15 @@
   .app-download__slogan {
     font-size: 50px;
     line-height: 68px;
+    padding-top: 140px;
   }
 
   .app-download__link-group {
     margin-bottom: 50px;
+  }
+
+  .app-download__availability {
+    margin-bottom: 77px;
   }
 }
 
@@ -183,7 +189,7 @@
 
     &::before {
       background-image: url("../img/bg-hand-promo-desktop@2x.png");
-      background-size: 1050px auto;
+      background-size: 940px auto;
     }
   }
 }

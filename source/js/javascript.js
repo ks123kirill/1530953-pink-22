@@ -6,7 +6,6 @@ let mainNavJs = function () {
 
   navMain.classList.remove('main-nav--no-js');
   navMain.classList.add('main-nav--open');
-  mainHeader.classList.add('main-header--js');
   mainHeader.classList.add('main-header--opacity');
   logo.classList.remove('logo--boxshadow');
 
