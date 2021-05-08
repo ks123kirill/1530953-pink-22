@@ -1,7 +1,7 @@
 .main-header {
   position: relative;
   z-index: 2;
-  min-height: 62px;
+  min-height: 66px;
   color: var(--basic-white);
   background-color: var(--basic-blue-dark);
   text-align: left;
@@ -9,13 +9,31 @@
   // outline-offset: -5px;
 }
 
+.main-header__logo {
+  padding: 22px 20px 14px 20px;
+}
+
 .main-header--opacity {
   background-color: var(--special-black-opacity);
+}
+
+@media (min-width: @tablet-width) {
+  .main-header {
+    min-height: 110px;
+  }
+
+  .main-header__logo {
+    padding-top: 0;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .main-header {
     background-color: var(--special-black-opacity);
+  }
+
+  .main-header__logo {
+    padding-left: 0;
   }
 
   .main-header__wrapper {
@@ -27,7 +45,7 @@
     box-sizing: border-box;
     padding: 0 130px;
     margin: 0 auto;
-    outline: 5px dotted var(--basic-red);
-    outline-offset: -5px;
+    // outline: 5px dotted var(--basic-red);
+    // outline-offset: -5px;
   }
 }

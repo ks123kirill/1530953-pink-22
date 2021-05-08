@@ -1,5 +1,5 @@
 .radio {
-  padding: 0 0 40px 0;
+  padding: 0 0 44px 0;
 }
 
 .radio__label {
@@ -8,7 +8,7 @@
   font-size: 18px;
   line-height: 30px;
   color: var(--basic-blue-dark);
-  padding-left: 55px;
+  padding-left: 69px;
   cursor: pointer;
   user-select: none;
 }
@@ -18,7 +18,7 @@
   content: "";
   width: 36px;
   height: 36px;
-  top: 0;
+  top: -7px;
   left: 0;
   border: 2px solid var(--basic-grey-dark);
   border-radius: 50%;
@@ -38,4 +38,10 @@
 
 .radio__input:active + .radio__label::before {
   border-color: var(--basic-red);
+}
+
+@media (min-width: @tablet-width) {
+  .radio__label {
+    padding-left: 62px;
+  }
 }
