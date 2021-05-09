@@ -24,12 +24,13 @@
     pointer-events: none;
   }
 
-  &:hover:not(:active) path,
-  &:focus:not(:active) path {
+  &:hover:not(:active),
+  &:focus:not(:active) {
     fill: var(--basic-red);
+    color: var(--basic-red);
   }
 
-  &:active path {
+  &:active {
     opacity: 0.3;
   }
 }
