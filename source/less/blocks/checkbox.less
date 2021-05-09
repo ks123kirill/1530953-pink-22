@@ -1,5 +1,5 @@
 .checkbox {
-  padding: 0 0 40px 0;
+  padding: 0 0 52px 0;
 }
 
 .checkbox__label {
@@ -39,4 +39,10 @@
 
 .checkbox__input:active + .checkbox__label::before {
   border-color: var(--basic-red);
+}
+
+@media (min-width: @desktop-width) {
+  .checkbox__input + .checkbox__label::before {
+    top: -4px;
+  }
 }
