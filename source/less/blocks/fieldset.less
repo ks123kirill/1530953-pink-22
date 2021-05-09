@@ -85,6 +85,7 @@
 .fieldset__input {
   width: 100%;
   height: 63px;
+  font-family: "Open Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 30px;
   box-sizing: border-box;
@@ -100,7 +101,7 @@
   }
 
   &::placeholder {
-    font-family: inherit;
+    font-family: "Open Sans", "Arial", sans-serif;
     font-weight: inherit;
     font-style: inherit;
     font-size: 18px; // не соответствует макету
@@ -133,6 +134,19 @@
 }
 
 @media (min-width: @tablet-width) {
+  .fieldset__legend {
+    width: initial;
+    background-color: var(--basic-white);
+    padding-left: 31px;
+    padding-right: 31px;
+    padding-bottom: 50px;
+    margin-top: -10px;
+
+    & br {
+      display: none;
+    }
+  }
+
   .fieldset {
     border: 2px solid var(--basic-grey);
     background-color: var(--basic-white);
@@ -140,6 +154,10 @@
     &--user-progress {
       padding-top: 0;
       padding-bottom: 0;
+
+      & .fieldset__legend {
+        padding-bottom: 47px;
+      }
     }
 
     &--user-platform {
@@ -159,19 +177,6 @@
 
   .fieldset__list {
     padding-left: 45px;
-  }
-
-  .fieldset__legend {
-    width: initial;
-    background-color: var(--basic-white);
-    padding-left: 31px;
-    padding-right: 31px;
-    padding-bottom: 50px;
-    margin-top: -10px;
-
-    & br {
-      display: none;
-    }
   }
 
   .fieldset--user-name {
@@ -243,6 +248,8 @@
   .fieldset__input--textarea {
     width: initial;
     height: 193px;
+    padding-top: 16px;
+    padding-left: 25px;
     margin: 20px 53px 53px 50px;
   }
 }
@@ -272,10 +279,12 @@
 
     & :nth-of-type(3) {
       order: 2;
+      padding-left: 57px;
     }
 
     & :nth-of-type(4) {
       order: 5;
+      padding-left: 57px;
     }
 
     & :nth-of-type(5) {
@@ -288,14 +297,36 @@
   }
 
   .fieldset {
+    &--user-name {
+      & .fieldset__brick {
+        margin-bottom: 57px;
+      }
+
+      & .fieldset__brick:last-of-type {
+        margin-bottom: 0;
+      }
+
+      & .fieldset__input {
+        margin-left: 17px;
+      }
+    }
+
     &--user-platform {
       & .fieldset__list {
-        padding-left: 58px;
+        padding-left: 63px;
+      }
+
+      & .fieldset__legend {
+        padding-bottom: 48px;
       }
     }
 
     &--user-progress {
       padding-bottom: 8px;
+
+      & .fieldset__legend {
+        padding-bottom: 45px;
+      }
     }
 
     &--user-contacts {
@@ -314,12 +345,18 @@
       & .fieldset__legend {
         margin-left: 336px; //justefy-self: center; не хочет работать
         margin-right: 200px;
+        padding-bottom: 33px;
+      }
+
+      & .fieldset__label {
+        padding-bottom: 18px;;
       }
     }
   }
 
   .fieldset__input--textarea {
     height: 125px;
+    padding-top: 11px;
     margin-bottom: 40px;
   }
 }

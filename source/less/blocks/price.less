@@ -14,18 +14,20 @@
 
 .price__table {
   border-collapse: collapse;
-  border: 2px solid var(--basic-grey-dark);
-  background-color: var(--basic-white);
   text-transform: uppercase;
   box-sizing: border-box;
   margin-left: -530px;
   margin-right: -261px;
 
-  & th,
+  & th:not(:first-child),
   & td {
     width: 276px;
     border: 2px solid var(--basic-grey-dark);
     box-sizing: border-box;
+  }
+
+  & td {
+    background-color: var(--basic-white);
   }
 }
 
