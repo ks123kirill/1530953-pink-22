@@ -165,12 +165,13 @@
   .app-download {
     min-height: 853px;
     background-image: url("../img/bg-town-promo-desktop.jpg");
-    overflow-x: hidden; // Справа фон руки показывает ушки
+    overflow-x: hidden;
 
     &::before {
       background-image: url("../img/bg-hand-promo-desktop.png");
       background-size: 1044px auto;
-      left: 71px;
+      background-position: bottom;
+      transform: translate(70px);
     }
   }
 

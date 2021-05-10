@@ -12,13 +12,17 @@
   position: relative;
   margin: 0 0 62px 0;
 
+  &--crop {
+    margin-left: -5px;
+  }
+
   &--crop,
   &--fill {
     margin-right: 35px;
   }
 
   &--contrast {
-    margin-bottom: 117px;
+    margin-bottom: 114px;
   }
 }
 
@@ -28,7 +32,7 @@
   width: 320px;
   height: 1px;
   background-color: var(--special-blue-light-opacity);
-  top: 123px;
+  top: 119px;
   left: -59px;
 }
 
@@ -38,12 +42,9 @@
 }
 
 .range__img {
-  & path {
-    fill-opacity: 0.3;
-  }
+  fill: var(--special-blue-opacity);
 
-  &--active path {
-    fill-opacity: initial;
+  &--active {
     fill: var(--basic-red);
   }
 }
@@ -70,7 +71,7 @@
 
   &--crop {
     position: absolute;
-    top: 80px;
+    top: 81px;
     left: -20px;
   }
 
@@ -170,32 +171,33 @@
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     margin: 0;
   }
 
   .range__label {
     display: flex;
     align-items: center;
-    margin: 0 0 35px 0;
+    margin: 0 0 28px 0;
 
     &::after {
       display: initial;
       width: 275px;
-      top: 62px;
-      left: 15px;
+      top: 56px;
+      left: 6px;
     }
+  }
+
+  .range__label-button {
+    margin-right: 15px;
   }
 
   .range__toggle--crop {
     position: initial;
   }
 
-  .range__img {
-    & path {//Временное решение для соответствия макету (до подключения JS)
-      fill-opacity: initial;
-      fill: var(--basic-red);
-    }
+  .range__img {//Временное решение для соответствия макету (до подключения JS)
+    fill: var(--basic-red);
 
     &--crop {
       width: 22px;
@@ -214,7 +216,7 @@
   }
 
   .range__toggle {
-    width: 202px;
+    min-width: 202px;
 
     &--fill,
     &--contrast {
@@ -222,8 +224,14 @@
     }
   }
 
+  .range__add-button {
+    width: 260px;
+    margin-left: 8px;
+  }
+
   .range__add-button--post {
-    margin-top: 40px;
+    margin-top: 51px;
+    margin-bottom: 23px;
   }
 }
 
@@ -261,8 +269,9 @@
 
     &--post {
       align-self: flex-start;
-      margin-top: 114px;
+      margin-top: 130px;
       margin-bottom: 0;
+      margin-left: 0;
     }
   }
 }

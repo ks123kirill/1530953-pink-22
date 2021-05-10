@@ -3,13 +3,11 @@
 }
 
 .page-main__slogan {
-  outline: 1px solid purple;
-  outline-offset: -1px;
   font-size: 14px;
   line-height: 30px;
   color: var(--basic-blue-dark);
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 23px;
+  padding-bottom: 42px;
 }
 
 .page-main__slogan p {
@@ -25,5 +23,18 @@
 @media (min-width: @tablet-width) {
   .page-main {
     margin-top: -110px;
+  }
+
+  .page-main__slogan {
+    font-size: 18px;
+    padding-top: 44px;
+    padding-bottom: 70px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main__slogan {
+    padding-top: 3px;
+    padding-bottom: 67px;
   }
 }
