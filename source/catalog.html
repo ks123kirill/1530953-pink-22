@@ -226,8 +226,8 @@
         <form class="catalog-add__range range" action="https://echo.htmlacademy.ru" method="post">
 
           <p class="range__label range__label--crop">
-            <button class="button range__label-button" type="button">
-              <svg class="range__img range__img--crop range__img--active" width="44" height="44" role="img">
+            <button class="button range__label-button" type="button" aria-label="Обрезать изображение">
+              <svg class="range__img range__img--crop range__img--active" width="44" height="44" role="img" aria-hidden="true">
                 <use xlink:href="img/vector-sprite.svg#icon-crop"></use>
               </svg>
             </button>
@@ -236,8 +236,8 @@
           </p>
 
           <p class="range__label range__label--fill">
-            <button class="button range__label-button" type="button">
-              <svg class="range__img range__img--fill" width="48" height="43" role="img">
+            <button class="button range__label-button" type="button" aria-label="Изменить насыщенность">
+              <svg class="range__img range__img--fill" width="48" height="43" role="img" aria-hidden="true">
                 <use xlink:href="img/vector-sprite.svg#icon-fill"></use>
               </svg>
             </button>
@@ -246,8 +246,8 @@
           </p>
 
           <p class="range__label range__label--contrast">
-            <button class="button range__label-button" type="button">
-              <svg class="range__img range__img--contrast" width="32" height="32" role="img">
+            <button class="button range__label-button" type="button" aria-label="Изменить контрастность">
+              <svg class="range__img range__img--contrast" width="32" height="32" role="img" aria-hidden="true">
                 <use xlink:href="img/vector-sprite.svg#icon-contrast"></use>
               </svg>
             </button>
@@ -256,7 +256,7 @@
           </p>
 
           <button class="button range__add-button range__add-button--post" type="submit">Запостить</button>
-          <input class="button range__add-button range__add-button--repeal"  type="reset" value="Отмена">
+          <input class="button range__add-button range__add-button--repeal"  type="reset" value="Отмена" aria-label="Отмена">
         </form>
       </section>
     </main>

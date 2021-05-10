@@ -4,18 +4,14 @@
 }
 
 .card__link {
-  height: 180px;
   display: block;
   position: relative;
   text-decoration: none;
 }
 
-.card__link--panorama {
-  height: 137px;//<a> не ужимается под содержимое
-}
-
 .card__link--panorama .card__mark {
   position: absolute;
+  width: 140px;
   top: 0;
   right: 20px;
   background-color: var(--basic-red);
@@ -25,7 +21,7 @@
   text-transform: uppercase;
   color: var(--basic-white);
   text-align: center;
-  padding: 6px 20px;
+  padding: 6px 0;
 }
 
 .card__img-panorama {
@@ -35,6 +31,7 @@
 }
 
 .card__img {
+  display: block;
   object-fit: contain;
   background-color: var(--basic-blue-dark);
 }
@@ -97,14 +94,6 @@
 }
 
 @media (min-width: @tablet-width) {
-  .card__link {//<a> не ужимается под содержимое
-    height: 300px;
-  }
-
-  .card__link--panorama {//<a> не ужимается под содержимое
-    height: 509px;
-  }
-
   .card__img-panorama {
     height: 509px;
   }
@@ -195,16 +184,8 @@
 }
 
 @media (min-width: @desktop-width) {
-  .card__link {
-    height: 400px;
-  }
-
   .card__img {
     height: 400px;
-  }
-
-  .card__link--panorama {//<a> не ужимается под содержимое
-    height: 506px;
   }
 
   .card__img-panorama {
@@ -213,7 +194,9 @@
 
   .card__link--panorama .card__mark {
     top: 54px;
-    right: 10.7%; //После 1200px .card__mark выходит за пределы wrapper 940px
+    left: 50%;
+    right: 50%;
+    transform: translate(330px);
   }
 
   .card--catalog {
