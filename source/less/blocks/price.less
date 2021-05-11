@@ -132,7 +132,7 @@
   .price__table {
     margin: 0 auto;
 
-    & th,
+    & th:not(:first-child),
     & td {
       width: 155px;
       box-sizing: border-box;
@@ -182,14 +182,14 @@
   }
 
   .price__wrapper {
-    width: 1200px;
-    padding: 0 130px;
+    width: 940px;
+    padding: 0;
     margin: 0 auto;
     box-sizing: border-box;
   }
 
   .price__table {
-    & th,
+    & th:not(:first-child),
     & td {
       width: 235px;
     }

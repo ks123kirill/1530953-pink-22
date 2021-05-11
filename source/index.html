@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Пинк</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
     <link rel="icon" href="favicon.ico"><!-- 16x16 -->
     <link rel="icon" href="img/favicon/favicon-32x32.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicon/favicon-180x180.png">
@@ -18,13 +18,13 @@
         <div class="logo logo--boxshadow main-header__logo" id="logo-index">
           <a class="logo__link logo__link--header" aria-label="Ссылка на главную страницу сайта Pink">
             <svg class="logo__img logo__img--mobile" width="74" height="23" role="img">
-              <use xlink:href="img/vector-sprite.svg#icon-pink"></use>
+              <use xlink:href="img/sprite.svg#icon-pink"></use>
             </svg>
             <svg class="logo__img logo__img--tablet" width="145" height="40" role="img">
-              <use xlink:href="img/vector-sprite.svg#icon-pink-glasses"></use>
+              <use xlink:href="img/sprite.svg#icon-pink-glasses"></use>
             </svg>
             <svg class="logo__img logo__img--desktop" width="147" height="40" role="img">
-              <use xlink:href="img/vector-sprite.svg#icon-pink-glasses-special"></use>
+              <use xlink:href="img/sprite.svg#icon-pink-glasses-special"></use>
             </svg>
           </a>
         </div>
@@ -60,17 +60,17 @@
             <div class="app-download__link-group">
               <a class="app-download__link app-download__link--apple" href="https://www.apple.com/ru/app-store/" aria-label="ссылка на app-store">
                 <svg width="47" height="56" role="img">
-                  <use xlink:href="img/vector-sprite.svg#icon-apple"></use>
+                  <use xlink:href="img/sprite.svg#icon-apple"></use>
                 </svg>
               </a>
               <a class="app-download__link app-download__link--android" href="https://android-market.ru.aptoide.com/app" aria-label="ссылка на androidmarket">
                 <svg width="43" height="47" role="img">
-                  <use xlink:href="img/vector-sprite.svg#icon-android"></use>
+                  <use xlink:href="img/sprite.svg#icon-android"></use>
                 </svg>
               </a>
               <a class="app-download__link app-download__link--microsoft" href="https://www.microsoft.com/ru-ru/store/apps" aria-label="ссылка на windowsapps">
                 <svg width="44" height="41" role="img">
-                  <use xlink:href="img/vector-sprite.svg#icon-microsoft"></use>
+                  <use xlink:href="img/sprite.svg#icon-microsoft"></use>
                 </svg>
               </a>
             </div>
@@ -152,9 +152,16 @@
             <button class="button slider__toggle" type="button" aria-label="Третий отзыв"></button>
           </p>
 
-          <button class="button slider__direction slider__direction--prev" type="button" aria-label="Предыдущий отзыв"></button>
-          <button class="button slider__direction slider__direction--next" type="button" aria-label="Следующий отзыв"></button>
-
+          <button class="button slider__direction slider__direction--prev" type="button" aria-label="Предыдущий отзыв">
+            <svg width="22" height="41" aria-hidden="true">
+              <use xlink:href="img/sprite.svg#icon-arrow"></use>
+            </svg>
+          </button>
+          <button class="button slider__direction slider__direction--next" type="button" aria-label="Следующий отзыв">
+            <svg width="22" height="41" aria-hidden="true">
+              <use xlink:href="img/sprite.svg#icon-arrow"></use>
+            </svg>
+          </button>
         </div>
       </section>
 
@@ -235,10 +242,10 @@
           <div class="main-footer__logo logo">
             <a class="logo__link logo__link--footer" href="#logo-index" aria-label="Ссылка на начало главной страницы сайта Pink">
               <svg class="logo__img logo__img--mobile" width="145" height="40" role="img">
-                <use xlink:href="img/vector-sprite.svg#icon-pink-glasses"></use>
+                <use xlink:href="img/sprite.svg#icon-pink-glasses"></use>
               </svg>
               <svg class="logo__img logo__img--desktop" width="147" height="40" role="img">
-                <use xlink:href="img/vector-sprite.svg#icon-pink-glasses-special-2"></use>
+                <use xlink:href="img/sprite.svg#icon-pink-glasses-special-2"></use>
               </svg>
             </a>
           </div>
@@ -266,14 +273,14 @@
             <p class="main-footer__developer-text">Разработано:</p>
             <a class="main-footer__developer-link" href="https://up.htmlacademy.ru/" aria-label="Ссылка на сайт htmlacademy.ru">
               <svg width="27" height="34" role="img">
-                <use xlink:href="img/vector-sprite.svg#icon-htmlacademy"></use>
+                <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
               </svg>
             </a>
           </div>
         </div>
     </footer>
 
-    <script src="js/javascript.js"></script>
+    <script src="js/script.min.js"></script>
 
   </body>
 </html>

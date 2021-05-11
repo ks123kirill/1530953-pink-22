@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Пинк</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
     <link rel="icon" href="favicon.ico"><!-- 16x16 -->
     <link rel="icon" href="img/favicon/favicon-32x32.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicon/favicon-180x180.png">
@@ -18,13 +18,13 @@
         <div class="logo logo--boxshadow main-header__logo" id="logo-index">
           <a class="logo__link logo__link--header" href="index.html" aria-label="Ссылка на главную страницу сайта Pink">
             <svg class="logo__img logo__img--mobile" width="74" height="23" role="img">
-              <use xlink:href="img/vector-sprite.svg#icon-pink"></use>
+              <use xlink:href="img/sprite.svg#icon-pink"></use>
             </svg>
             <svg class="logo__img logo__img--tablet" width="145" height="40" role="img">
-              <use xlink:href="img/vector-sprite.svg#icon-pink-glasses"></use>
+              <use xlink:href="img/sprite.svg#icon-pink-glasses"></use>
             </svg>
             <svg class="logo__img logo__img--desktop" width="147" height="40" role="img">
-              <use xlink:href="img/vector-sprite.svg#icon-pink-glasses-special"></use>
+              <use xlink:href="img/sprite.svg#icon-pink-glasses-special"></use>
             </svg>
           </a>
         </div>
@@ -70,11 +70,11 @@
           <div class="catalog__panorama card">
             <a class="card__link card__link--panorama" href="#" aria-label="ссылка на полноэкранное изображение">
               <picture>
-                <source type="image/webp" media="(min-width: 1200px)" srcset="img/panorama-desktop.webp 1x, img/panorama-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 970px)" srcset="img/panorama-desktop.webp 1x, img/panorama-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 660px)" srcset="img/panorama-tablet.webp 1x, img/panorama-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/panorama-mobile.webp 1x, img/panorama-mobile@2x.webp 2x">
 
-                <source media="(min-width: 1200px)" srcset="img/panorama-desktop.jpg 1x, img/panorama-desktop@2x.jpg 2x">
+                <source media="(min-width: 970px)" srcset="img/panorama-desktop.jpg 1x, img/panorama-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="img/panorama-tablet.jpg 1x, img/panorama-tablet@2x.jpg 2x">
                 <img class="card__img-panorama" src="img/panorama-mobile.jpg" srcset="img/panorama-mobile@2x.jpg 2x" width="320" height="137" alt="Металлический мост между двумя возвышенностями">
               </picture>
@@ -98,7 +98,11 @@
               <li class="catalog__item card card--catalog">
                 <a class="card__link" href="#" aria-label="ссылка на полноэкранное изображение">
                   <picture>
-                    <source media="(min-width: 1200px)" srcset="img/photograph-auto-desktop.jpg 1x, img/photograph-auto-desktop@2x.jpg 2x">
+                    <source type="image/webp" media="(min-width: 970px)" srcset="img/photograph-auto-desktop.webp 1x, img/photograph-auto-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 660px)" srcset="img/photograph-auto-tablet.webp 1x, img/photograph-auto-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/photograph-auto-mobile.webp 1x, img/photograph-auto-mobile@2x.webp 2x">
+
+                    <source media="(min-width: 970px)" srcset="img/photograph-auto-desktop.jpg 1x, img/photograph-auto-desktop@2x.jpg 2x">
                     <source media="(min-width: 660px)" srcset="img/photograph-auto-tablet.jpg 1x, img/photograph-auto-tablet@2x.jpg 2x">
                     <img class="card__img" src="img/photograph-auto-mobile.jpg" srcset="img/photograph-auto-mobile@2x.jpg 2x" width="280" height="180" alt="Фотоаппарат на стойке фотографирует белый автомобиль">
                   </picture>
@@ -116,7 +120,11 @@
               <li class="catalog__item card card--catalog">
                 <a class="card__link" href="#" aria-label="ссылка на полноэкранное изображение">
                   <picture>
-                    <source media="(min-width: 1200px)" srcset="img/drum-set-desktop.jpg 1x, img/drum-set-desktop@2x.jpg 2x">
+                    <source type="image/webp" media="(min-width: 970px)" srcset="img/drum-set-desktop.webp 1x, img/drum-set-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 660px)" srcset="img/drum-set-tablet.webp 1x, img/drum-set-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/drum-set-mobile.webp 1x, img/drum-set-mobile@2x.webp 2x">
+
+                    <source media="(min-width: 970px)" srcset="img/drum-set-desktop.jpg 1x, img/drum-set-desktop@2x.jpg 2x">
                     <source media="(min-width: 660px)" srcset="img/drum-set-tablet.jpg 1x, img/drum-set-tablet@2x.jpg 2x">
                     <img class="card__img" src="img/drum-set-mobile.jpg" srcset="img/drum-set-mobile@2x.jpg 2x" width="280" height="180" alt="Барабанная установка">
                   </picture>
@@ -134,7 +142,11 @@
               <li class="catalog__item card card--catalog">
                 <a class="card__link" href="#" aria-label="ссылка на полноэкранное изображение">
                   <picture>
-                    <source media="(min-width: 1200px)" srcset="img/glass-ceiling-desktop.jpg 1x, img/glass-ceiling-desktop@2x.jpg 2x">
+                    <source type="image/webp" media="(min-width: 970px)" srcset="img/glass-ceiling-desktop.webp 1x, img/glass-ceiling-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 660px)" srcset="img/glass-ceiling-tablet.webp 1x, img/glass-ceiling-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/glass-ceiling-mobile.webp 1x, img/glass-ceiling-mobile@2x.webp 2x">
+
+                    <source media="(min-width: 970px)" srcset="img/glass-ceiling-desktop.jpg 1x, img/glass-ceiling-desktop@2x.jpg 2x">
                     <source media="(min-width: 660px)" srcset="img/glass-ceiling-tablet.jpg 1x, img/glass-ceiling-tablet@2x.jpg 2x">
                     <img class="card__img" src="img/glass-ceiling-mobile.jpg" srcset="img/glass-ceiling-mobile@2x.jpg 2x" width="280" height="180" alt="Вид на небо через стеклянный потолок комнаты">
                   </picture>
@@ -152,7 +164,11 @@
               <li class="catalog__item card card--catalog">
                 <a class="card__link" href="#" aria-label="ссылка на полноэкранное изображение">
                   <picture>
-                    <source media="(min-width: 1200px)" srcset="img/kuban-fair-desktop.jpg 1x, img/kuban-fair-desktop@2x.jpg 2x">
+                    <source type="image/webp" media="(min-width: 970px)" srcset="img/kuban-fair-desktop.webp 1x, img/kuban-fair-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 660px)" srcset="img/kuban-fair-tablet.webp 1x, img/kuban-fair-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/kuban-fair-mobile.webp 1x, img/kuban-fair-mobile@2x.webp 2x">
+
+                    <source media="(min-width: 970px)" srcset="img/kuban-fair-desktop.jpg 1x, img/kuban-fair-desktop@2x.jpg 2x">
                     <source media="(min-width: 660px)" srcset="img/kuban-fair-tablet.jpg 1x, img/kuban-fair-tablet@2x.jpg 2x">
                     <img class="card__img" src="img/kuban-fair-mobile.jpg" srcset="img/kuban-fair-mobile@2x.jpg 2x" width="280" height="180" alt="Ярмарка ''Кубанская бахча''">
                   </picture>
@@ -170,7 +186,11 @@
               <li class="catalog__item card card--catalog">
                 <a class="card__link" href="#" aria-label="ссылка на полноэкранное изображение">
                   <picture>
-                    <source media="(min-width: 1200px)" srcset="img/view-from-cliff-desktop.jpg 1x, img/view-from-cliff-desktop@2x.jpg 2x">
+                    <source type="image/webp" media="(min-width: 970px)" srcset="img/view-from-cliff-desktop.webp 1x, img/view-from-cliff-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 660px)" srcset="img/view-from-cliff-tablet.webp 1x, img/view-from-cliff-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/view-from-cliff-mobile.webp 1x, img/view-from-cliff-mobile@2x.webp 2x">
+
+                    <source media="(min-width: 970px)" srcset="img/view-from-cliff-desktop.jpg 1x, img/view-from-cliff-desktop@2x.jpg 2x">
                     <source media="(min-width: 660px)" srcset="img/view-from-cliff-tablet.jpg 1x, img/view-from-cliff-tablet@2x.jpg 2x">
                     <img class="card__img" src="img/view-from-cliff-mobile.jpg" srcset="img/view-from-cliff-mobile@2x.jpg 2x" width="280" height="180" alt="Вид от первого лица сидящего на краю обрыва">
                   </picture>
@@ -188,7 +208,11 @@
               <li class="catalog__item card card--catalog">
                 <a class="card__link" href="#" aria-label="ссылка на полноэкранное изображение">
                   <picture>
-                    <source media="(min-width: 1200px)" srcset="img/airplane-wing-desktop.jpg 1x, img/airplane-wing-desktop@2x.jpg 2x">
+                    <source type="image/webp" media="(min-width: 970px)" srcset="img/airplane-wing-desktop.webp 1x, img/airplane-wing-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 660px)" srcset="img/airplane-wing-tablet.webp 1x, img/airplane-wing-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/airplane-wing-mobile.webp 1x, img/airplane-wing-mobile@2x.webp 2x">
+
+                    <source media="(min-width: 970px)" srcset="img/airplane-wing-desktop.jpg 1x, img/airplane-wing-desktop@2x.jpg 2x">
                     <source media="(min-width: 660px)" srcset="img/airplane-wing-tablet.jpg 1x, img/airplane-wing-tablet@2x.jpg 2x">
                     <img class="card__img" src="img/airplane-wing-mobile.jpg" srcset="img/airplane-wing-mobile@2x.jpg 2x" width="280" height="180" alt="Вид из иллюминатора летящего самолета">
                   </picture>
@@ -218,6 +242,9 @@
         <h2 class="visually-hidden">Запостить фотографию</h2>
         <div class="catalog-add__photo">
           <picture>
+            <source type="image/webp" media="(min-width: 660px)" srcset="img/winter-road-tablet.webp 1x, img/winter-road-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/winter-road-mobile.webp 1x, img/winter-road-mobile@2x.webp 2x">
+
             <source media="(min-width: 660px)" srcset="img/winter-road-tablet.jpg 1x, img/winter-road-tablet@2x.jpg 2x">
             <img class="catalog-add__img" src="img/winter-road-mobile.jpg" srcset="img/winter-road-mobile@2x.jpg 2x" width="280" height="374" alt="Зимняя дорога">
           </picture>
@@ -228,7 +255,7 @@
           <p class="range__label range__label--crop">
             <button class="button range__label-button" type="button" aria-label="Обрезать изображение">
               <svg class="range__img range__img--crop range__img--active" width="44" height="44" role="img" aria-hidden="true">
-                <use xlink:href="img/vector-sprite.svg#icon-crop"></use>
+                <use xlink:href="img/sprite.svg#icon-crop"></use>
               </svg>
             </button>
             <label class="visually-hidden" for="range-crop">Обрезать изображение</label>
@@ -238,7 +265,7 @@
           <p class="range__label range__label--fill">
             <button class="button range__label-button" type="button" aria-label="Изменить насыщенность">
               <svg class="range__img range__img--fill" width="48" height="43" role="img" aria-hidden="true">
-                <use xlink:href="img/vector-sprite.svg#icon-fill"></use>
+                <use xlink:href="img/sprite.svg#icon-fill"></use>
               </svg>
             </button>
             <label class="visually-hidden" for="range-fill">Изменить насыщенность</label>
@@ -248,7 +275,7 @@
           <p class="range__label range__label--contrast">
             <button class="button range__label-button" type="button" aria-label="Изменить контрастность">
               <svg class="range__img range__img--contrast" width="32" height="32" role="img" aria-hidden="true">
-                <use xlink:href="img/vector-sprite.svg#icon-contrast"></use>
+                <use xlink:href="img/sprite.svg#icon-contrast"></use>
               </svg>
             </button>
             <label class="visually-hidden" for="range-contrast">Изменить контрастность</label>
@@ -267,10 +294,10 @@
         <div class="main-footer__logo logo">
           <a class="logo__link logo__link--footer" href="index.html" aria-label="Ссылка на начало главной страницы сайта Pink">
             <svg class="logo__img logo__img--mobile" width="145" height="40" role="img">
-              <use xlink:href="img/vector-sprite.svg#icon-pink-glasses"></use>
+              <use xlink:href="img/sprite.svg#icon-pink-glasses"></use>
             </svg>
             <svg class="logo__img logo__img--desktop" width="147" height="40" role="img">
-              <use xlink:href="img/vector-sprite.svg#icon-pink-glasses-special-2"></use>
+              <use xlink:href="img/sprite.svg#icon-pink-glasses-special-2"></use>
             </svg>
           </a>
         </div>
@@ -298,14 +325,14 @@
           <p class="main-footer__developer-text">Разработано:</p>
           <a class="main-footer__developer-link" href="https://up.htmlacademy.ru/" aria-label="Ссылка на сайт htmlacademy.ru">
             <svg width="27" height="34" role="img">
-              <use xlink:href="img/vector-sprite.svg#icon-htmlacademy"></use>
+              <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
             </svg>
           </a>
         </div>
       </div>
     </footer>
 
-    <script src="js/javascript.js"></script>
+    <script src="js/script.min.js"></script>
 
   </body>
 </html>

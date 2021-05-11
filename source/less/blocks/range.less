@@ -42,21 +42,28 @@
 }
 
 .range__img {
-  fill: var(--special-blue-opacity);
+  fill: var(--basic-blue-dark);
+  opacity: 0.3;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
 
   &--active {
     fill: var(--basic-red);
+    opacity: 1;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
   }
 }
 
 .range__label-button {
   width: 44px;
   height: 44px;
-  background-color: transparent;
-
-  &:hover path {
-    fill-opacity: 0.5;
-  }
 }
 
 .range__toggle {
@@ -196,9 +203,7 @@
     position: initial;
   }
 
-  .range__img {//Временное решение для соответствия макету (до подключения JS)
-    fill: var(--basic-red);
-
+  .range__img {
     &--crop {
       width: 22px;
       height: 22px;
