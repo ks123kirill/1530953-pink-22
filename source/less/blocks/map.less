@@ -1,12 +1,12 @@
 .map {
   position: relative;
+  z-index: 1;
   height: 201px;
   background-color: var(--basic-grey);
   background-image: url("../img/map-mobile.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  overflow-x: hidden;
 
   &::before {
     position: absolute;
@@ -23,14 +23,6 @@
     background-size: cover;
     margin: 0 auto;
   }
-}
-
-.map__iframe {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  border: 0;
-  z-index: 1;
 }
 
 @media (min-resolution: 2dppx) {
