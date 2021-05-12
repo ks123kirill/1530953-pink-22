@@ -45,4 +45,3 @@ let initMap = function() {
 
 mainNavJs();
 // ymaps.ready(initMap);
-
