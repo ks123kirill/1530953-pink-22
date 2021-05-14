@@ -25,7 +25,7 @@ let mainNavJs = function () {
 
 let initMap = function() {
 
-  let map = document.querySelector('.map');
+  let map = document.querySelector('.map__interactive');
 
   let myMap = new ymaps.Map(map, {
     center: [59.93662, 30.3211],
@@ -44,4 +44,4 @@ let initMap = function() {
 };
 
 mainNavJs();
-// ymaps.ready(initMap);
+ymaps.ready(initMap);

@@ -31,7 +31,7 @@
   }
 }
 
-.price__tariffs--bestseller {
+.price__tariffs-name--bestseller {
   position: relative;
 
   &::before {
@@ -126,7 +126,8 @@
 
   .price__wrapper {
     padding: 0 20px;
-    width: 620px;
+    min-width: 620px;
+    width: initial;
   }
 
   .price__table {
@@ -134,7 +135,7 @@
 
     & th:not(:first-child),
     & td {
-      width: 155px;
+      min-width: 155px;
       box-sizing: border-box;
     }
   }
@@ -162,7 +163,7 @@
     margin: 0 auto;
   }
 
-  .price__tariffs--bestseller::before {
+  .price__tariffs-name--bestseller::before {
     width: 58px;
     height: 61px;
     top: 0;
@@ -210,7 +211,7 @@
     font-size: 18px;
   }
 
-  .price__tariffs--bestseller::before {
+  .price__tariffs-name--bestseller::before {
     width: 74px;
     height: 74px;
   }

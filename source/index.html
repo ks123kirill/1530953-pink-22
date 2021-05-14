@@ -20,7 +20,7 @@
     <header class="main-header">
       <div class="main-header__wrapper">
         <div class="logo logo--boxshadow main-header__logo" id="logo-index">
-          <a class="logo__link logo__link--header" aria-label="Ссылка на главную страницу сайта Pink">
+          <a class="logo__link logo__link--header logo__link--disabled" aria-label="Ссылка на главную страницу сайта Pink">
             <svg class="logo__img logo__img--mobile" width="74" height="23" role="img">
               <use xlink:href="img/sprite.svg#icon-pink"></use>
             </svg>
@@ -33,7 +33,7 @@
           </a>
         </div>
         <nav class="main-nav main-nav--no-js">
-          <button class="button button--hamburger main-nav__toggle main-nav__button" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <button class="button main-nav__toggle main-nav__button" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="main-nav__list">
             <li class="main-nav__item">
               <a class="main-nav__link main-nav__link--active">Главная</a>
@@ -176,29 +176,53 @@
               <thead>
                 <tr class="price__tariffs">
                   <th class="price__tariffs-empty"></th>
-                  <th class="price__tariffs-name">База<br><span class="price__tariffs-cost">1,99 USD</span></th>
-                  <th class="price__tariffs-name price__tariffs--bestseller">Стандарт<br><span class="price__tariffs-cost">3,99 USD</span></th>
-                  <th class="price__tariffs-name">Анлим<br><span class="price__tariffs-cost">9,99 USD</span></th>
+                  <th class="price__tariffs-name">База<br>
+                    <span class="price__tariffs-cost">1,99 USD</span>
+                  </th>
+                  <th class="price__tariffs-name price__tariffs-name--bestseller">Стандарт<br>
+                    <span class="price__tariffs-cost">3,99 USD</span>
+                  </th>
+                  <th class="price__tariffs-name">Анлим<br>
+                    <span class="price__tariffs-cost">9,99 USD</span>
+                  </th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td class="price__spec-name">Розовый фильтр</td>
-                  <td class="price__spec-bool price__spec-bool--true" aria-label="Да"><span class="price__spec-name price__spec-name--repeat">Розовый фильтр</span></td>
-                  <td class="price__spec-bool price__spec-bool--true" aria-label="Да"><span class="price__spec-name price__spec-name--repeat">Розовый фильтр</span></td>
-                  <td class="price__spec-bool price__spec-bool--true" aria-label="Да"><span class="price__spec-name price__spec-name--repeat">Розовый фильтр</span></td>
+                  <td class="price__spec-bool price__spec-bool--true" aria-label="Да">
+                    <span class="price__spec-name price__spec-name--repeat">Розовый фильтр</span>
+                  </td>
+                  <td class="price__spec-bool price__spec-bool--true" aria-label="Да">
+                    <span class="price__spec-name price__spec-name--repeat">Розовый фильтр</span>
+                  </td>
+                  <td class="price__spec-bool price__spec-bool--true" aria-label="Да">
+                    <span class="price__spec-name price__spec-name--repeat">Розовый фильтр</span>
+                  </td>
                 </tr>
                 <tr>
                   <td class="price__spec-name">Смайлики</td>
-                  <td class="price__spec-bool price__spec-bool--false"><span class="price__spec-name price__spec-name--repeat" aria-label="Нет">Смайлики</span></td>
-                  <td class="price__spec-bool price__spec-bool--true"><span class="price__spec-name price__spec-name--repeat" aria-label="Да">Смайлики</span></td>
-                  <td class="price__spec-bool price__spec-bool--true"><span class="price__spec-name price__spec-name--repeat" aria-label="Да">Смайлики</span></td>
+                  <td class="price__spec-bool price__spec-bool--false" aria-label="Нет">
+                    <span class="price__spec-name price__spec-name--repeat">Смайлики</span>
+                  </td>
+                  <td class="price__spec-bool price__spec-bool--true" aria-label="Да">
+                    <span class="price__spec-name price__spec-name--repeat">Смайлики</span>
+                  </td>
+                  <td class="price__spec-bool price__spec-bool--true" aria-label="Да">
+                    <span class="price__spec-name price__spec-name--repeat">Смайлики</span>
+                  </td>
                 </tr>
                 <tr>
                   <td class="price__spec-name">Комментарии</td>
-                  <td class="price__spec-bool price__spec-bool--false"><span class="price__spec-name price__spec-name--repeat" aria-label="Нет">Комментарии</span></td>
-                  <td class="price__spec-bool price__spec-bool--false"><span class="price__spec-name price__spec-name--repeat" aria-label="Нет">Комментарии</span></td>
-                  <td class="price__spec-bool price__spec-bool--true"><span class="price__spec-name price__spec-name--repeat" aria-label="Да">Комментарии</span></td>
+                  <td class="price__spec-bool price__spec-bool--false" aria-label="Нет">
+                    <span class="price__spec-name price__spec-name--repeat">Комментарии</span>
+                  </td>
+                  <td class="price__spec-bool price__spec-bool--false" aria-label="Нет">
+                    <span class="price__spec-name price__spec-name--repeat">Комментарии</span>
+                  </td>
+                  <td class="price__spec-bool price__spec-bool--true" aria-label="Да">
+                    <span class="price__spec-name price__spec-name--repeat">Комментарии</span>
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -236,6 +260,7 @@
 
       <div class="map">
         <h2 class="visually-hidden">Карта</h2>
+        <div class="map__interactive"></div>
       </div>
     </main>
 
@@ -283,8 +308,8 @@
         </div>
     </footer>
 
-    <!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=85622a5c-d933-4c45-a15e-5a2f646280b8&lang=ru_RU" loading="lazy">
-    </script> -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=85622a5c-d933-4c45-a15e-5a2f646280b8&lang=ru_RU">
+    </script>
 
     <script src="js/script.min.js"></script>
 
