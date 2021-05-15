@@ -1,23 +1,28 @@
 .price {
+  display: flex;
   background-image: url("../img/background-grey-mobile.svg");
   background-position: center top -41px;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 100px 0 28px 0;
+  padding: 100px 0 24px 0;
 }
 
 .price__wrapper {
   width: 320px;
   overflow: hidden;
   margin: 0 auto;
+  flex-grow: 1;
 }
 
 .price__table {
   border-collapse: collapse;
   text-transform: uppercase;
   box-sizing: border-box;
-  margin-left: -530px;
-  margin-right: -261px;
+  table-layout: fixed;
+  width: 100%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 
   & th:not(:first-child),
   & td {
@@ -119,6 +124,7 @@
 
 @media (min-width: @tablet-width) {
   .price {
+    display: block;
     background-image: url("../img/background-grey-tablet.svg");
     background-position: center top -18px;
     padding-bottom: 72px;
@@ -128,9 +134,15 @@
     padding: 0 20px;
     min-width: 620px;
     width: initial;
+    flex-grow: 0;
   }
 
   .price__table {
+    table-layout: initial;
+    width: initial;
+    position: initial;
+    left: initial;
+    transform: initial;
     margin: 0 auto;
 
     & th:not(:first-child),

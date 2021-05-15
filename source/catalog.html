@@ -19,7 +19,7 @@
 
     <header class="main-header">
       <div class="main-header__wrapper">
-        <div class="logo logo--boxshadow main-header__logo" id="logo-index">
+        <div class="logo logo--boxshadow main-header__logo">
           <a class="logo__link logo__link--header" href="index.html" aria-label="Ссылка на главную страницу сайта Pink">
             <svg class="logo__img logo__img--mobile" width="74" height="23" role="img">
               <use xlink:href="img/sprite.svg#icon-pink"></use>
@@ -255,36 +255,38 @@
         </div>
 
         <form class="catalog-add__range range" action="https://echo.htmlacademy.ru" method="post">
+          <div class="range__top">
+            <p class="range__label range__label--crop">
+              <button class="button range__label-button" type="button" aria-label="Обрезать изображение">
+                <svg class="range__img range__img--crop range__img--active" width="44" height="44" aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#icon-crop"></use>
+                </svg>
+              </button>
+              <label class="visually-hidden" for="range-crop">Обрезать изображение</label>
+              <input class="range__toggle range__toggle--crop" id="range-crop" type="range" name="range-toggle-size" min="10" max="100" step="1" value="87">
+            </p>
 
-          <p class="range__label range__label--crop">
-            <button class="button range__label-button" type="button" aria-label="Обрезать изображение">
-              <svg class="range__img range__img--crop range__img--active" width="44" height="44" role="img" aria-hidden="true">
-                <use xlink:href="img/sprite.svg#icon-crop"></use>
-              </svg>
-            </button>
-            <label class="visually-hidden" for="range-crop">Обрезать изображение</label>
-            <input class="range__toggle range__toggle--crop" id="range-crop" type="range" name="range-toggle-size" min="10" max="100" step="1" value="87">
-          </p>
+            <p class="range__label range__label--fill">
+              <button class="button range__label-button" type="button" aria-label="Изменить насыщенность">
+                <svg class="range__img range__img--fill" width="48" height="43" aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#icon-fill"></use>
+                </svg>
+              </button>
+              <label class="visually-hidden" for="range-fill">Изменить насыщенность</label>
+              <input class="range__toggle range__toggle--fill" type="range" name="range-fill" id="range-fill" min="10" max="100" step="1" value="22">
+            </p>
 
-          <p class="range__label range__label--fill">
-            <button class="button range__label-button" type="button" aria-label="Изменить насыщенность">
-              <svg class="range__img range__img--fill" width="48" height="43" role="img" aria-hidden="true">
-                <use xlink:href="img/sprite.svg#icon-fill"></use>
-              </svg>
-            </button>
-            <label class="visually-hidden" for="range-fill">Изменить насыщенность</label>
-            <input class="range__toggle range__toggle--fill" type="range" name="range-fill" id="range-fill" min="10" max="100" step="1" value="22">
-          </p>
+            <p class="range__label range__label--contrast">
+              <button class="button range__label-button" type="button" aria-label="Изменить контрастность">
+                <svg class="range__img range__img--contrast" width="32" height="32" role="img" aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#icon-contrast"></use>
+                </svg>
+              </button>
+              <label class="visually-hidden" for="range-contrast">Изменить контрастность</label>
+              <input class="range__toggle range__toggle--contrast" type="range" name="range-contrast" id="range-contrast" min="10" max="100" step="1" value="55">
+            </p>
+          </div>
 
-          <p class="range__label range__label--contrast">
-            <button class="button range__label-button" type="button" aria-label="Изменить контрастность">
-              <svg class="range__img range__img--contrast" width="32" height="32" role="img" aria-hidden="true">
-                <use xlink:href="img/sprite.svg#icon-contrast"></use>
-              </svg>
-            </button>
-            <label class="visually-hidden" for="range-contrast">Изменить контрастность</label>
-            <input class="range__toggle range__toggle--contrast" type="range" name="range-contrast" id="range-contrast" min="10" max="100" step="1" value="55">
-          </p>
           <div class="range__bottom">
             <button class="button range__add-button range__add-button--post" type="submit">Запостить</button>
             <button class="button range__add-button range__add-button--repeal"  type="reset">Отмена</button>

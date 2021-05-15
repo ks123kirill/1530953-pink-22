@@ -21,7 +21,8 @@
   text-transform: uppercase;
   color: var(--basic-white);
   text-align: center;
-  padding: 6px 0;
+  box-sizing: border-box;
+  padding: 6px 10px;
 }
 
 .card__img-panorama {
@@ -180,6 +181,7 @@
 
     & .card__like-wrapper {
       justify-content: space-between;
+      overflow-y: auto;
     }
   }
 }
