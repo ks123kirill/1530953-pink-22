@@ -9,7 +9,7 @@
   text-decoration: none;
 }
 
-.card__link--panorama .card__mark {
+.card__mark {
   position: absolute;
   width: 140px;
   top: 0;
@@ -21,7 +21,8 @@
   text-transform: uppercase;
   color: var(--basic-white);
   text-align: center;
-  padding: 6px 0;
+  box-sizing: border-box;
+  padding: 6px 10px;
 }
 
 .card__img-panorama {
@@ -99,7 +100,7 @@
     height: 509px;
   }
 
-  .card__link--panorama .card__mark {
+  .card__mark {
     top: 57px;
   }
 
@@ -125,27 +126,27 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content min-content;
 
-    & .card__author {
+    .card__author {
       grid-column: ~"1/2";
       grid-row: ~"1/2";
     }
 
-    & .card__text {
+    .card__text {
       grid-column: ~"1/-1";
       grid-row: ~"2/-1";
     }
 
-    & .card__like-wrapper {
+    .card__like-wrapper {
       grid-column: ~"2/-1";
       grid-row: ~"1/2";
       padding-top: 3px;
     }
 
-    & .card__like-count {
+    .card__like-count {
       margin-right: 15px;
     }
 
-    & br {
+    br {
       display: none;
     }
   }
@@ -167,19 +168,20 @@
     flex-direction: column;
     justify-content: space-between;
 
-    & .card__author {
+    .card__author {
       max-height: 100px;
       overflow-y: auto;
     }
 
-    & .card__text {
+    .card__text {
       max-height: 250px;
       min-height: 48px;
       overflow-y: auto;
     }
 
-    & .card__like-wrapper {
+    .card__like-wrapper {
       justify-content: space-between;
+      overflow-y: auto;
     }
   }
 }
@@ -193,7 +195,7 @@
     height: 506px;
   }
 
-  .card__link--panorama .card__mark {
+  .card__mark {
     top: 54px;
     right: 50%;
     transform: translate(469px);

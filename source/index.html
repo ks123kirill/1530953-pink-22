@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Пинк</title>
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
+    <link rel="preload" href="fonts/opensanslight.woff2" as="font">
+    <link rel="preload" href="css/style.min.css" as="style">
     <link href="css/style.min.css" rel="stylesheet">
     <link rel="icon" href="favicon.ico"><!-- 16x16 -->
     <link rel="icon" href="img/favicon/favicon-32x32.svg" type="image/svg+xml">
@@ -15,7 +19,7 @@
 
     <header class="main-header">
       <div class="main-header__wrapper">
-        <div class="logo logo--boxshadow main-header__logo" id="logo-index">
+        <div class="logo logo--boxshadow main-header__logo">
           <a class="logo__link logo__link--header" aria-label="Ссылка на главную страницу сайта Pink">
             <svg class="logo__img logo__img--mobile" width="74" height="23" role="img">
               <use xlink:href="img/sprite.svg#icon-pink"></use>
@@ -29,7 +33,7 @@
           </a>
         </div>
         <nav class="main-nav main-nav--no-js">
-          <button class="button button--hamburger main-nav__toggle main-nav__button" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <button class="button main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="main-nav__list">
             <li class="main-nav__item">
               <a class="main-nav__link main-nav__link--active">Главная</a>
@@ -55,7 +59,7 @@
       <section class="app-download">
         <h2 class="visually-hidden">Скачать приложение</h2>
           <div class="app-download__block wrapper">
-            <p class="app-download__slogan">Взгляните на жизнь<br> иначе!</p>
+            <p class="app-download__slogan">Взгляните на жизнь&#160;<br>иначе!</p>
             <a class="app-download__link app-download__link--default" href="https://www.apple.com/ru/app-store/" aria-label="ссылка на app-store">Скачать приложение</a>
             <div class="app-download__link-group">
               <a class="app-download__link app-download__link--apple" href="https://www.apple.com/ru/app-store/" aria-label="ссылка на app-store">
@@ -74,8 +78,7 @@
                 </svg>
               </a>
             </div>
-            <p class="app-download__availability">Доступно для iPhone, iPad, Android,<br>
-              Windows Phone, OS X, Windows 8</p>
+            <p class="app-download__availability">Доступно для iPhone, iPad, Android,&#160;<br>Windows Phone, OS X, Windows 8</p>
           </div>
       </section>
 
@@ -84,7 +87,7 @@
 
         <div class="advantages__block-slogan wrapper">
           <p class="advantages__slogan">Устали от серости мегаполиса?</p>
-          <p class="advantages__slogan">Нам есть, что вам,<br> предложить!</p>
+          <p class="advantages__slogan">Нам есть, что вам,&#160;<br>предложить!</p>
         </div>
 
         <div class="advantages__block-list">
@@ -97,18 +100,18 @@
 
             <li class="advantages__item">
               <h3 class="advantages__title">Меняет мир вокруг</h3>
-              <p class="advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы <br class="advantages__br--tablet"> усилить эффект</p>
+              <p class="advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы <br class="advantages__br-tablet"> усилить эффект</p>
             </li>
 
             <li class="advantages__item">
-              <h3 class="advantages__title">Заводит<br class="advantages__br--desktop"> новых друзей</h3>
+              <h3 class="advantages__title">Заводит&#160;<br class="advantages__br-desktop">новых друзей</h3>
               <p class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
             </li>
 
             <li class="advantages__item advantages__item--full-screen">
-              <h3 class="advantages__title">Эффект<br class="advantages__br--tablet"> на 24 часа!</h3>
-              <p class="advantages__description">Британские ученые провели исследования и доказали,<br class="advantages__br--desktop"> что положительный эффект<br class="advantages__br--tablet"> от использования приложения длится целые сутки!</p>
-              <a class="advantages__link" href="#">Узнать больше об исследовании</a>
+              <h3 class="advantages__title">Эффект&#160;<br class="advantages__br-tablet">на 24 часа!</h3>
+              <p class="advantages__description">Британские ученые провели исследования и доказали,<br class="advantages__br-desktop"> что положительный эффект<br class="advantages__br-tablet"> от использования приложения длится целые сутки!</p>
+              <a class="advantages__link" href="more.html">Узнать больше об исследовании</a>
             </li>
           </ul>
         </div>
@@ -122,22 +125,6 @@
 
           <ul class="reviews__list slider__list">
             <li class="reviews__item slider__item">
-              <blockquote class="reviews__blockquote">
-                <h3 class="reviews__author-name">Николай Петров</h3>
-                <p class="reviews__author-info">25 лет, водитель трамвая</p>
-                <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-              </blockquote>
-            </li>
-
-            <li class="reviews__item slider__item visually-hidden">
-              <blockquote class="reviews__blockquote">
-                <h3 class="reviews__author-name">Николай Петров</h3>
-                <p class="reviews__author-info">25 лет, водитель трамвая</p>
-                <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-              </blockquote>
-            </li>
-
-            <li class="reviews__item slider__item visually-hidden">
               <blockquote class="reviews__blockquote">
                 <h3 class="reviews__author-name">Николай Петров</h3>
                 <p class="reviews__author-info">25 лет, водитель трамвая</p>
@@ -172,29 +159,53 @@
               <thead>
                 <tr class="price__tariffs">
                   <th class="price__tariffs-empty"></th>
-                  <th class="price__tariffs-name">База<br><span class="price__tariffs-cost">1,99 USD</span></th>
-                  <th class="price__tariffs-name price__tariffs--bestseller">Стандарт<br><span class="price__tariffs-cost">3,99 USD</span></th>
-                  <th class="price__tariffs-name">Анлим<br><span class="price__tariffs-cost">9,99 USD</span></th>
+                  <th class="price__tariffs-name">База&#160;<br>
+                    <span class="price__tariffs-cost">1,99 USD</span>
+                  </th>
+                  <th class="price__tariffs-name price__tariffs-name--bestseller">Стандарт&#160;<br>
+                    <span class="price__tariffs-cost">3,99 USD</span>
+                  </th>
+                  <th class="price__tariffs-name">Анлим&#160;<br>
+                    <span class="price__tariffs-cost">9,99 USD</span>
+                  </th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td class="price__spec-name">Розовый фильтр</td>
-                  <td class="price__spec-bool price__spec-bool--true" aria-label="Да"><span class="price__spec-name price__spec-name--repeat">Розовый фильтр</span></td>
-                  <td class="price__spec-bool price__spec-bool--true" aria-label="Да"><span class="price__spec-name price__spec-name--repeat">Розовый фильтр</span></td>
-                  <td class="price__spec-bool price__spec-bool--true" aria-label="Да"><span class="price__spec-name price__spec-name--repeat">Розовый фильтр</span></td>
+                  <td class="price__spec-bool price__spec-bool--true" aria-label="Да">
+                    <span class="price__spec-name price__spec-name--repeat">Розовый фильтр</span>
+                  </td>
+                  <td class="price__spec-bool price__spec-bool--true" aria-label="Да">
+                    <span class="price__spec-name price__spec-name--repeat">Розовый фильтр</span>
+                  </td>
+                  <td class="price__spec-bool price__spec-bool--true" aria-label="Да">
+                    <span class="price__spec-name price__spec-name--repeat">Розовый фильтр</span>
+                  </td>
                 </tr>
                 <tr>
                   <td class="price__spec-name">Смайлики</td>
-                  <td class="price__spec-bool price__spec-bool--false"><span class="price__spec-name price__spec-name--repeat" aria-label="Нет">Смайлики</span></td>
-                  <td class="price__spec-bool price__spec-bool--true"><span class="price__spec-name price__spec-name--repeat" aria-label="Да">Смайлики</span></td>
-                  <td class="price__spec-bool price__spec-bool--true"><span class="price__spec-name price__spec-name--repeat" aria-label="Да">Смайлики</span></td>
+                  <td class="price__spec-bool price__spec-bool--false" aria-label="Нет">
+                    <span class="price__spec-name price__spec-name--repeat">Смайлики</span>
+                  </td>
+                  <td class="price__spec-bool price__spec-bool--true" aria-label="Да">
+                    <span class="price__spec-name price__spec-name--repeat">Смайлики</span>
+                  </td>
+                  <td class="price__spec-bool price__spec-bool--true" aria-label="Да">
+                    <span class="price__spec-name price__spec-name--repeat">Смайлики</span>
+                  </td>
                 </tr>
                 <tr>
                   <td class="price__spec-name">Комментарии</td>
-                  <td class="price__spec-bool price__spec-bool--false"><span class="price__spec-name price__spec-name--repeat" aria-label="Нет">Комментарии</span></td>
-                  <td class="price__spec-bool price__spec-bool--false"><span class="price__spec-name price__spec-name--repeat" aria-label="Нет">Комментарии</span></td>
-                  <td class="price__spec-bool price__spec-bool--true"><span class="price__spec-name price__spec-name--repeat" aria-label="Да">Комментарии</span></td>
+                  <td class="price__spec-bool price__spec-bool--false" aria-label="Нет">
+                    <span class="price__spec-name price__spec-name--repeat">Комментарии</span>
+                  </td>
+                  <td class="price__spec-bool price__spec-bool--false" aria-label="Нет">
+                    <span class="price__spec-name price__spec-name--repeat">Комментарии</span>
+                  </td>
+                  <td class="price__spec-bool price__spec-bool--true" aria-label="Да">
+                    <span class="price__spec-name price__spec-name--repeat">Комментарии</span>
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -211,7 +222,7 @@
         <h2 class="visually-hidden">Контакты</h2>
 
         <div class="contacts__wrapper wrapper">
-          <p class="contacts__us">Остались вопросы?<br>Свяжитесь с нами!</p>
+          <p class="contacts__us">Остались вопросы?&#160;<br>Свяжитесь с нами!</p>
 
           <div class="contacts__item">
             <p class="contacts__caption">Звоните:</p>
@@ -225,14 +236,14 @@
 
           <div class="contacts__item">
             <p class="contacts__caption">Приезжайте в гости:</p>
-            <address class="contacts__info">ул. Большая<br>Конюшенная, 19/8</address>
+            <address class="contacts__info">ул. Большая&#160;<br>Конюшенная, 19/8</address>
           </div>
         </div>
       </section>
 
       <div class="map">
         <h2 class="visually-hidden">Карта</h2>
-        <!-- <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003258!2d30.3208587162671!3d59.938719169053925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1619447294025!5m2!1sru!2sru" width="600" height="450" allowfullscreen="" loading="lazy"></iframe> -->
+        <div class="map__interactive"></div>
       </div>
     </main>
 
@@ -240,7 +251,7 @@
         <div class="main-footer__wrapper wrapper">
 
           <div class="main-footer__logo logo">
-            <a class="logo__link logo__link--footer" href="#logo-index" aria-label="Ссылка на начало главной страницы сайта Pink">
+            <a class="logo__link logo__link--footer" href="#" aria-label="Ссылка на начало главной страницы сайта Pink">
               <svg class="logo__img logo__img--mobile" width="145" height="40" role="img">
                 <use xlink:href="img/sprite.svg#icon-pink-glasses"></use>
               </svg>
@@ -279,6 +290,9 @@
           </div>
         </div>
     </footer>
+
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=85622a5c-d933-4c45-a15e-5a2f646280b8&lang=ru_RU">
+    </script>
 
     <script src="js/script.min.js"></script>
 

@@ -23,4 +23,25 @@ let mainNavJs = function () {
   });
 }
 
+let initMap = function() {
+
+  let map = document.querySelector('.map__interactive');
+
+  let myMap = new ymaps.Map(map, {
+    center: [59.93662, 30.3211],
+    zoom: 16,
+    controls: []
+  }, {});
+
+  let myPlacemark = new ymaps.Placemark([59.93662, 30.3211], {}, {
+    iconLayout: 'default#image',
+    iconImageHref: 'img/map-marker.png',
+    iconImageSize: [36, 36],
+    iconImageOffset: [-18, 12]
+  });
+
+  myMap.geoObjects.add(myPlacemark);
+};
+
 mainNavJs();
+ymaps.ready(initMap);

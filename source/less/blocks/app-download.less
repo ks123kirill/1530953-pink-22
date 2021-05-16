@@ -3,25 +3,23 @@
   color: var(--basic-white);
   background-color: var(--basic-blue-darken);
   box-sizing: border-box;
-  background-image: url("../img/bg-town-promo-mobile.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 462px; // изображение города приемлимо искажается между брейкпоинтами
-  background-position: top;
   padding-top: 70px;
 
   &::before {
     content: "";
     position: absolute;
     width: 100%;
-    height: 100%;
-    top: -271px;
+    height: 462px;
+    top: 0;
     left: 0;
     right: 0;
     margin: 0 auto;
-    background-image: url("../img/bg-hand-promo-mobile.png");
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: bottom;
+    background-image:
+      url("../img/bg-hand-promo-mobile.png"),
+      url("../img/bg-town-promo-mobile.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto, cover;
+    background-position: bottom, bottom;
   }
 }
 
@@ -41,9 +39,13 @@
   padding: 0;
   margin: 0;
 
+  &--apple {
+    fill: var(--basic-white);
+  }
+
   &--default {
     width: 280px;
-    height: 56px;
+    min-height: 56px;
     font-weight: bold;
     font-size: 18px;
     line-height: 15px;
@@ -76,13 +78,14 @@
 }
 
 .app-download__link-group {
+  width: 250px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: baseline;
   margin-bottom: 15px;
 
-  & a:not(:last-child) {
+  a:not(:last-child) {
     margin-right: 35px;
   }
 }
@@ -96,13 +99,11 @@
 }
 
 @media (min-resolution: 2dppx) {
-  .app-download {
-    background-image: url("../img/bg-town-promo-mobile@2x.jpg");
-
-    &::before {
-      background-image: url("../img/bg-hand-promo-mobile@2x.png");
-      background-size: 320px auto;
-    }
+  .app-download::before {
+    background-image:
+      url("../img/bg-hand-promo-mobile@2x.png"),
+      url("../img/bg-town-promo-mobile@2x.jpg");
+    background-size: 320px auto, cover;
   }
 }
 
@@ -112,10 +113,15 @@
     padding-top: 110px;
     background-image: url("../img/bg-town-promo-tablet.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
 
     &::before {
       background-image: url("../img/bg-hand-promo-tablet.png");
-      top: 0;
+      background-position: bottom;
+      background-repeat: no-repeat;
+      height: 544px;
+      top: 186px;
     }
   }
 
@@ -139,7 +145,7 @@
     align-items: center;
     margin-bottom: 22px;
 
-    & a:first-of-type {
+    a:first-of-type {
       margin-left: 46px;
     }
   }

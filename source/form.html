@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Пинк</title>
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
+    <link rel="preload" href="fonts/opensanslight.woff2" as="font">
+    <link rel="preload" href="css/style.min.css" as="style">
     <link href="css/style.min.css" rel="stylesheet">
     <link rel="icon" href="favicon.ico"><!-- 16x16 -->
     <link rel="icon" href="img/favicon/favicon-32x32.svg" type="image/svg+xml">
@@ -15,7 +19,7 @@
 
     <header class="main-header">
       <div class="main-header__wrapper">
-        <div class="logo logo--boxshadow main-header__logo" id="logo-index">
+        <div class="logo logo--boxshadow main-header__logo">
           <a class="logo__link logo__link--header" href="index.html" aria-label="Ссылка на главную страницу сайта Pink">
             <svg class="logo__img logo__img--mobile" width="74" height="23" role="img">
               <use xlink:href="img/sprite.svg#icon-pink"></use>
@@ -29,7 +33,7 @@
           </a>
         </div>
         <nav class="main-nav main-nav--no-js">
-          <button class="button button--hamburger main-nav__toggle main-nav__button" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <button class="button main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="main-nav__list">
             <li class="main-nav__item">
               <a class="main-nav__link" href="index.html">Главная</a>
@@ -59,7 +63,8 @@
 
       <div class="invitation-form">
         <div class="wrapper">
-          <p class="invitation-form__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!<span>Пожалуйста, заполните форму ниже:</span></p>
+          <p class="invitation-form__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
+            &#32;<span>Пожалуйста, заполните форму ниже:</span></p>
         </div>
       </div>
 
@@ -85,7 +90,7 @@
           </fieldset>
 
           <fieldset class="form__user-progress fieldset fieldset--user-progress">
-            <h2 class="fieldset__legend">Ваши безбашенные<br> достижения в путешествии</h2>
+            <h2 class="fieldset__legend">Ваши безбашенные&#160;<br>достижения в путешествии</h2>
             <ul class="fieldset__list fieldset__list--desktop-order">
               <li class="fieldset__item checkbox">
                 <input class="checkbox__input visually-hidden" type="checkbox" id="selfy-with-shark" name="selfy-with-shark" checked>
@@ -132,7 +137,7 @@
           </fieldset>
 
           <fieldset class="form__user-platform fieldset fieldset--user-platform">
-            <h2 class="fieldset__legend">С каким приложением<br> путешествовали?</h2>
+            <h2 class="fieldset__legend">С каким приложением&#160;<br>путешествовали?</h2>
             <ul class="fieldset__list">
               <li class="fieldset__item radio">
                 <input class="radio__input visually-hidden" type="radio" id="app-for-iOS" name="platform" value="app-for-iOS" checked>
@@ -208,18 +213,18 @@
       </div>
     </footer>
 
-    <modal class="modal modal--error">
+    <section class="modal modal--error">
       <div class="modal__block modal__block--1">
-        <h2 class="modal__title">Что-то пошло<br> не так!</h2>
+        <h2 class="modal__title">Что-то пошло&#160;<br>не так!</h2>
         <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
       </div>
 
       <div class="modal__block modal__block--2">
         <button class="button button--form modal__button" type="button">Ok</button>
       </div>
-    </modal>
+    </section>
 
-    <modal class="modal modal--success">
+    <section class="modal modal--success">
 
       <div class="modal__block modal__block--1">
         <h2 class="modal__title">Ваша заявка отправлена</h2>
@@ -229,7 +234,7 @@
       <div class="modal__block modal__block--2">
         <button class="button button--form modal__button" type="button">Закрыть окно</button>
       </div>
-    </modal>
+    </section>
 
     <script src="js/script.min.js"></script>
   </body>

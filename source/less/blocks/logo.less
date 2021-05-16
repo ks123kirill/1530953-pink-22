@@ -20,7 +20,7 @@
     fill: var(--basic-blue-dark);
   }
 
-  &--disabled {
+  &:not([href]) {
     pointer-events: none;
   }
 
@@ -43,13 +43,11 @@
 
 @media (min-width: @tablet-width) {
   .logo__link--header {
-    padding-top: 30px;
-
-    & .logo__img--mobile {
+    .logo__img--mobile {
       display: none;
     }
 
-    & .logo__img--tablet {
+    .logo__img--tablet {
       display: block;
     }
   }
@@ -61,21 +59,21 @@
   }
 
   .logo__link--header {
-    & .logo__img--tablet {
+    .logo__img--tablet {
       display: none;
     }
 
-    & .logo__img--desktop {
+    .logo__img--desktop {
       display: block;
     }
   }
 
   .logo__link--footer {
-    & .logo__img--mobile {
+    .logo__img--mobile {
       display: none;
     }
 
-    & .logo__img--desktop {
+    .logo__img--desktop {
       display: block;
     }
   }

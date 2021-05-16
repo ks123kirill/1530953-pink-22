@@ -2,28 +2,23 @@
   max-width: 280px;
   box-sizing: border-box;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   margin: 0 auto;
 }
 
-.range__label {
+.range__top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   position: relative;
-  margin: 0 0 62px 0;
+  padding-bottom: 70px;
+  padding-left: 37px;
+}
 
-  &--crop {
-    margin-left: -5px;
-  }
-
-  &--crop,
-  &--fill {
-    margin-right: 35px;
-  }
-
-  &--contrast {
-    margin-bottom: 114px;
-  }
+.range__label {
+  margin: 13px 35px 0 0;
 }
 
 .range__label::after {
@@ -32,8 +27,8 @@
   width: 320px;
   height: 1px;
   background-color: var(--special-blue-light-opacity);
-  top: 119px;
-  left: -59px;
+  bottom: 2px;
+  left: -21px;
 }
 
 .range__label--fill::after,
@@ -64,27 +59,24 @@
 .range__label-button {
   width: 44px;
   height: 44px;
+  background-color: transparent;
 }
 
 .range__toggle {
+  display: none;
   appearance: none; /* Hides the slider so that custom slider can be made */
   background: transparent; /* Otherwise white in Chrome */
   min-width: 240px;
-  // width: 100%;
   height: 2px;
   cursor: pointer;
   box-sizing: border-box;
   box-shadow: inset 1px 2px 1px #000000;
+  position: absolute;
+  bottom: 35px;
+  left: 18px;
 
   &--crop {
-    position: absolute;
-    top: 81px;
-    left: -20px;
-  }
-
-  &--fill,
-  &--contrast {
-    display: none;
+    display: block;
   }
 }
 
@@ -172,6 +164,10 @@
   }
 }
 
+.range__bottom {
+  margin-top: 36px;
+}
+
 @media (min-width: @tablet-width) {
   .range {
     max-width: initial;
@@ -182,15 +178,21 @@
     margin: 0;
   }
 
+  .range__top {
+    flex-direction: column;
+    padding: 0;
+  }
+
   .range__label {
     display: flex;
+    position: relative;
     align-items: center;
     margin: 0 0 28px 0;
 
     &::after {
       display: initial;
       width: 275px;
-      top: 56px;
+      bottom: -12px;
       left: 6px;
     }
   }
@@ -199,11 +201,10 @@
     margin-right: 15px;
   }
 
-  .range__toggle--crop {
-    position: initial;
-  }
-
   .range__img {
+    fill: var(--basic-red);
+    opacity: 1;
+
     &--crop {
       width: 22px;
       height: 22px;
@@ -218,10 +219,18 @@
       width: 16px;
       height: 16px;
     }
+
+    &:hover,
+    &:focus,
+    &:active {
+      opacity: 1;
+    }
   }
 
   .range__toggle {
     min-width: 202px;
+    bottom: 21px;
+    left: 59px;
 
     &--fill,
     &--contrast {
@@ -235,8 +244,13 @@
   }
 
   .range__add-button--post {
-    margin-top: 51px;
     margin-bottom: 23px;
+  }
+
+  .range__bottom {
+    margin-top: 51px;
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -247,6 +261,8 @@
 
   .range__toggle {
     width: 288px;
+    bottom: 23px;
+    left: 89px;
   }
 
   .range__img {
@@ -263,20 +279,20 @@
     left: 0;
   }
 
+  .range__bottom {
+    margin-top: 117px;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    & :nth-child(odd) {
+      margin-right: 43px;
+    }
+  }
+
   .range__add-button {
     width: 183px;
-
-    &--repeal {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-    }
-
-    &--post {
-      align-self: flex-start;
-      margin-top: 130px;
-      margin-bottom: 0;
-      margin-left: 0;
-    }
+    margin-top: 10px;
+    margin-bottom: 0;
+    margin-left: 0;
   }
 }
