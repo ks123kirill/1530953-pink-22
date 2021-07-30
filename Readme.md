@@ -1,4 +1,4 @@
-# Проект «Pink» от [HTML Academy](https://htmlacademy.ru/)
+# Учебный проект «Pink» от [HTML Academy](https://htmlacademy.ru/)
 
 * Верстка: [Кирилл Скорописцев](https://htmlacademy.ru/profile/id1530953)
 * Наставник: [Виталя Игошин](https://htmlacademy.ru/profile/id353627)
